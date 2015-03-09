@@ -1,10 +1,4 @@
----
-title: "MiSeq Wet Lab SOP"
-layout: post
-output:
-  html_document:
-    keep_md: yes
----
+# MiSeq Wet Lab SOP
 
 
 |-------:|:--------|
