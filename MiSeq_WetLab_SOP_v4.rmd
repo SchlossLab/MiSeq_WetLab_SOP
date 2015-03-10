@@ -537,7 +537,9 @@ Use the SequalPrep Normalization Plate Kit
 5.  Confirm with investigator that data are of sufficient quality and
     quantity.
 
-***Appendix B***
+  ---------------------------------------------------------------
+  **Appendix A: Adding An Assay To Illumina Experiment Manager**
+  ---------------------------------------------------------------
 
 5.  Using Illumina Experiment Manager, create a sample plate for each 96
     well plate of template. Choose indexes that correspond to one of the
@@ -560,7 +562,7 @@ Use the SequalPrep Normalization Plate Kit
     B.
 
 
-Adding An Assay To Illumina Experiment Manager
+
 
 Introduction
 
@@ -608,9 +610,11 @@ Procedure
 
 11. Add a line at to the bottom with the text “Schloss”
 
-***Appendix C***
+  -----------------------------
+  **Appendix B: Primer design**
+  -----------------------------
 
-Primer design
+
 
 Overall design considerations
 
