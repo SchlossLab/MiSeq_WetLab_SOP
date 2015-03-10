@@ -1,6 +1,7 @@
 # MiSeq Wet Lab SOP
 
 
+
 |-------:|:--------|
 **Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing |
 **Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior |
@@ -9,10 +10,9 @@
 **Last Updated:**   | 9-March-2015 |
 **Updated By:**     |  Niel Baxter |
 
-
-  ------------------------------------
-  **1.0) Introduction and Workflow**
-  ------------------------------------
+------------------------------------
+**1.0) Introduction and Workflow**
+------------------------------------
 
 ***1.1) Introduction***
 
@@ -32,58 +32,46 @@
 
 ***1.2) 16S Prep Workflow***
 
-1.  Samples must be arrayed in 96 well plate format. If possible, leave
-    two wells on each plate open for controls. Plate used should be
-    compatible with Eppendorf epMotion 5075.
+1.  Extracted DNA should be arrayed in 96 well plate format. If possible, leave
+    two wells on each plate open for controls. 
 
-2.  The investigator will provide the technician with the names of the
-    project, experiment, a one-sentence description of the experiment, a
-    name for each plate submitted (up to 4 96 well plates per run), the
-    names and groupings of each sample.
+2.  PCR of 16S samples with Schloss lab indices. Each plate will contain a negative control
+    (water) and a positive control (mock community)
+    
+3.  A subset of 12-24 samples from each plate will undergo electrophoresis
+    on a 1% agarose gel to ensure amplification proceeded normally.    
 
-3.  A Sample Plate will then be created for each plate using Illumina
-    Experiment Manager. Sample Plates will then be used to create a
-    Sample Sheet. This sheet serves as the set of run parameters and
-    indexing scheme used by the MiSeq for the run.
-
-4.  PCR of 16S samples with Schloss lab indices (up to 94 samples can be
-    processed per plate). Each plate will contain a negative control
-    (water) and a positive control (mock community).
-
-5.  A subset of 12 samples from each plate will undergo electrophoresis
-    on a 1% agarose gel to ensure amplification proceeded normally.
-
-6.  Library clean up and normalization performed using the Invitrogen
+4.  Library clean up and normalization performed using the Invitrogen
     [SequalPrep](http://products.invitrogen.com/ivgn/product/A1051001)
     Plate Normalization Kit.
 
-7.  Samples from all plates are pooled.
+5.  Samples from each plate are pooled into single wells (i.e. 1 well/plate, 4 wells total for a run with 4 plates).
 
-8.  Library QC includes quantification using a KAPA Biosystems [Q-PCR
-    kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits)
-    cat\# KK4824, and obtaining a Bioanalyzer trace using the [Agilent
-    Technologies HS DNA
-    kit](http://www.genomics.agilent.com/CollectionSubpage.aspx?PageType=Product&SubPageType=ProductDetail&PageID=1635)
-    cat\# 5067-4626.
+6.  (Optional) To assess the quality of the library, the investigator may choose to perform
+    a Bioanalyzer trace using the [Agilent Technologies HS DNAkit](http://www.genomics.agilent.com/CollectionSubpage.aspx?PageType=Product&SubPageType=ProductDetail&PageID=1635) cat\# 5067-4626.
 
-9.  Library enters the Sequencing Workflow.
+7.  (Optional) If the post-PCR gel or the Bioanalyzer trace suggests contaminant DNA
+    from leftover indices/primer-dimer, an additional gel purification of the pooled 
+    plates is recommended.  This often imporves the quality of the sequencing run.
+
+8.  Each pooled plate is quantified using a KAPA Biosystems [Q-PCR kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits) cat\# KK4824. 
+
+9.  Plates are pooled to equal concentration into a single well (i.e. 1 well per run)
+        
+    
+9.  The pooled library enters the Sequencing Workflow.
 
 ***1.3) Sequencing Workflow***
 
-1.  The technician will review all documentation including the sample
-    sheet. The sample sheet will be transferred to the instrument. The
-    Technician will consult with the investigator to choose an
-    appropriate amount of DNA to load for optimal cluster density and
-    ensure optimum data quality/quantity.
+1.  A Sample Plate is created for each plate using Illumina Experiment Manager. 
+    Sample Plates are then used to create a Sample Sheet. This sheet serves 
+    as the set of run parameters and indexing scheme used by the MiSeq for the run. 
+    The sample sheet is then transferred to the MiSeq via flash drive.
 
-2.  The reagent cartridge will be thawed in a water bath per the [MiSeq
-    User
-    Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf).
+2.  The reagent cartridge is thawed in a water bath per the [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf).
 
 3.  Unless otherwise specified, dilution and loading will follow the
-    steps outlined in the document:
-
-Preparing DNA Libraries for Sequencing on the MiSeq[ (15039740
+    steps outlined in the document: Preparing DNA Libraries for Sequencing on the MiSeq[ (15039740
 C)](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing_libraries_for_miseq_15039740_c.pdf)
 
 1.  Any custom primers required (including those for 16S) will be mixed
