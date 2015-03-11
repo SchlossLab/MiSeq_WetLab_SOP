@@ -16,6 +16,10 @@
 
 ***1.1) Introduction***
 
+-   The Purpose of this protocol is to define the steps and estimated costs for 
+    the preparation and sequencing of 16S rRNA gene sequence libraries 
+    using the Illumina MiSeq sequencing platform.
+
 -   The Illumina MiSeq Personal Sequencer can produce 2 x 250 paired-end
     reads and up to 8.5 Gb of data in a single run. Dual indexing of
     library samples allows up to 384 samples to be run simultaneously.
@@ -32,36 +36,41 @@
 
 ***1.2) 16S Prep Workflow***
 
-1.  Extracted DNA should be arrayed in 96 well plate format. If possible, leave
+    This section is an overview of the steps involved in library preparation.  
+    For a more detailed desctiption of the mehods, see Section 5 below.
+
+1.  Extracted DNA should be arrayed in 96 well plate format, preferably with
     two wells on each plate open for controls. 
 
-2.  PCR of 16S samples with Schloss lab indices. Each plate will contain a negative control
+2.  Samples are PCR amplified with Schloss lab indices. Each plate should contain a negative control
     (water) and a positive control (mock community)
     
-3.  A subset of 12-24 samples from each plate will undergo electrophoresis
+3.  A subset of 12-24 samples from each plate undergoes electrophoresis
     on a 1% agarose gel to ensure amplification proceeded normally.    
 
-4.  Library clean up and normalization performed using the Invitrogen
+4.  Library clean up and normalization is performed using the Invitrogen
     [SequalPrep](http://products.invitrogen.com/ivgn/product/A1051001)
     Plate Normalization Kit.
 
-5.  Samples from each plate are pooled into single wells (i.e. 1 well/plate, 4 wells total for a run with 4 plates).
+5.  Samples from each plate are pooled into single wells (i.e. 1 well/plate).
 
 6.  (Optional) To assess the quality of the library, the investigator may choose to perform
     a Bioanalyzer trace using the [Agilent Technologies HS DNAkit](http://www.genomics.agilent.com/CollectionSubpage.aspx?PageType=Product&SubPageType=ProductDetail&PageID=1635) cat\# 5067-4626.
 
 7.  (Optional) If the post-PCR gel or the Bioanalyzer trace suggests contaminant DNA
     from leftover indices/primer-dimer, an additional gel purification of the pooled 
-    plates is recommended.  This often imporves the quality of the sequencing run.
+    plates is recommended.  This often improves the quality of the sequencing run.
 
 8.  Each pooled plate is quantified using a KAPA Biosystems [Q-PCR kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits) cat\# KK4824. 
 
 9.  Plates are pooled to equal concentration into a single well (i.e. 1 well per run)
         
-    
-9.  The pooled library enters the Sequencing Workflow.
+10.  The pooled library enters the Sequencing Workflow.
 
 ***1.3) Sequencing Workflow***
+
+    This section is an overview of the steps involved in initiating a sequencing run.  
+    For a more detailed desctiption of the mehods, see Section 5 below.
 
 1.  A Sample Plate is created for each plate using Illumina Experiment Manager. 
     Sample Plates are then used to create a Sample Sheet. This sheet serves 
@@ -71,25 +80,20 @@
 2.  The reagent cartridge is thawed in a water bath per the [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf).
 
 3.  Unless otherwise specified, dilution and loading will follow the
-    steps outlined in the document: Preparing DNA Libraries for Sequencing on the MiSeq[ (15039740
-C)](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing_libraries_for_miseq_15039740_c.pdf)
+    steps outlined in the document: [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)  
+      a. Pooled library and PhiX control are denatured and diluted.  
+      b. Diluted library and PhiX are pooled (5-10% PhiX, 90-95% Library).  
+      c. Sequencing pimers and library/PhiX are loaded into the reagent cartridge.  
+      d. MiSeq flow cell is washed  
 
-1.  Any custom primers required (including those for 16S) will be mixed
-    with the native primers on the reagent cartridge.
+4.  The sample sheet, flow cell, reagent cartridge, PR2 bottle, and an empty waste bottle 
+    are loaded onto the MiSeq, and the run is initiated. A 500 cycle run takes approx. 44 hours.
 
-2.  The technician will load the sample sheet, flow cell, reagent
-    cartridge, PR2 bottle, and an empty waste bottle onto the MiSeq and
-    start the run. A 500 cycle run takes approx. 44 hours.
+5.  The run is monitored using Illumina Sequence Analysis Viewer.
 
-3.  The technician will monitor the run using Illumina Sequence Analysis
-    Viewer.
+6.  Upon completions of the run, fastq files are transfered to the Schloss Lab NAS drive.
 
-4.  The data will be stored on the Schloss Lab NAS drive and made
-    available to the investigator following run completion. Unless
-    otherwise requested, default output will be fastq files.
-
-5.  Technician will perform a post run wash and any required maintenance
-    of instrument.
+7.  A post run wash is performed, followed by a standby wash if the machine will be idle for a week or more.
 
   ------------------------------------
   **2.0) Safety and Waste Disposal**
@@ -105,9 +109,7 @@ C)](http://supportres.illumina.com/documents/documentation/system_documentation/
     be disposed of in an appropriate container following the run. Liquid
     waste from a run must also be disposed of as hazardous due to the
     formamide content.
-
--   All other safety concerns may be addressed to the lab chemical
-    safety officer.
+    
 
   ----------------------
   **3.0) Consumables**
@@ -119,10 +121,11 @@ C)](http://supportres.illumina.com/documents/documentation/system_documentation/
   PhiX Control Kit v3                                     FC-110-3001   \$132.00
   16s Index Primers (40 total)                            IDT           \$1180.00
   16s Sequencing Primers (Read 1, Index, Read 2)          IDT           \$41.71
-  AccuPrime™ Pfx SuperMix 200rxns                         12344-040     \$331.28
-  Agilent High Sensitivity DNA Kit                        5067-4626     \$434.70
+  AccuPrime™ Pfx SuperMix (200rxns)                       12344-040     \$331.28
   Library Quantification Kit - Illumina/Universal         KK4824        \$575.00
   SequalPrep™ Normalization Plate (96) Kit                A10510-01     \$453.60
+  (optional) Agilent High Sensitivity DNA Kit             5067-4626     \$434.70
+  (optional) QIAquick Gel Extraction Kit (50 rxns)        28704         \$111.00
   epT.I.P.S. Motion 1-50 uL Reloads 24 racks of 96 tips   30014421      \$190.00
   Tip One Refill Wafers 200uL elongated graduated         NC9549602     \$39.24
   Tip One Refill Wafers 1000uL graduated                  1111-2721     \$25.25
@@ -133,13 +136,13 @@ C)](http://supportres.illumina.com/documents/documentation/system_documentation/
   **4.0) Run Costs**
   --------------------
 
-  For 384 sample run   PCR and Indexing   Cleanup Pooling & Normalization   Library QC   Sequencing   Totals   Total Cost with Man Hours   Duration (days)
-  -------------------- ------------------ --------------------------------- ------------ ------------ -------- --------------------------- -----------------
-  16S Reagents         \$588              \$265                             \$138        \$941        \$1932   \$2,232                     4.5 days
-  16S Man hours        4                  3                                 4            4            15                                   
+  For 384 sample run  PCR and Indexing  Cleanup & Normalization Library QC  Sequencing  Totals
+  ------------------  ----------------  ----------------------- ----------  ----------  ------
+  16S Reagents         \$588              \$265                 \$138        \$941      \$1932
+  16S Man hours        4                  3                      4            4            15                                   
 
   --------------------
-  **5.0) Method(s)**
+  **5.0) Detailed Method(s)**
   --------------------
 
 ***5.1) Published Protocols***
@@ -147,91 +150,22 @@ C)](http://supportres.illumina.com/documents/documentation/system_documentation/
 -   The following methods and references are used in the workflows
     above.
 
-    -   [MiSeq User
-        Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf)
-        Rev. L
+    -   [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf)
 
-    -   Preparing DNA Libraries for Sequencing on the MiSeq[ (15039740
-        C)](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing_libraries_for_miseq_15039740_c.pdf)
+    -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
-    -   Kapa Biosystems Q-PCR Library [Quantification
-        Kit](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
-        Illumina
+    -   [Kapa Biosystems Q-PCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
+        
+    -   [Accuprime Pfx Super Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
 
-    -   Accuprime Pfx [Super
-        Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
+    -   [SequalPrep Normalization Plate (96) Kit](http://tools.lifetechnologies.com/content/sfs/manuals/sequalprep_platekit_man.pdf)
 
-    -   Agilent High Sensitivity DNA Kit Guide
+    -   [Agilent High Sensitivity DNA Kit Guide](http://www.chem.agilent.com/library/usermanuals/Public/G2938-90321_SensitivityDNA_KG_EN.pdf)
 
-    -   SequalPrep Normalization Plate (96) Kit
+    -   [QIAquick Gel Extraction Kit](https://www.qiagen.com/us/resources/download.aspx?id=f4ba2d24-8218-452c-ad6f-1b6f43194425&lang=en)
 
-***5.2) Working Protocols***
 
--   A Detailed protocol for the 16S workflow can be found in Appendix A.
-
-  ------------------------
-  **6.0) Data Analysis**
-  ------------------------
-
-***6.1) During Run***
-
--   The Technician will monitor the run using Illumina Sequence Analysis
-    Viewer.
-
--   To asses run quality, the technician will review the following data:
-    cluster density, clusters passing filter, data yield, Q30 Score,
-    intensity, corrected intensity, % base composition, % aligned,
-    reads, reads passing filter, and indices identified following index
-    reads.
-
--   The tolerances for the preceding data are run type dependent. The
-    investigator will consult the technician prior to the run to
-    determine these values.
-
-***6.2) Post Run***
-
--   The default repository for run data is the “runs” folder on the
-    Schloss Lab NAS Drive.
-
--   Investigators wishing for personal copies of fastq files must
-    provide the technician with storage media.
-
--   The investigator will determine whether sufficient coverage and
-    quality have been achieved or if there is a need for re-sequencing,
-    and notify the technician immediately.
-
--   It is recommended that investigators use
-    [mothur](http://www.mothur.org/) for fastq analysis.
-
-  Version   Date        Change                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Reason
-  --------- ----------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------
-  1.0       3/18/2013   SOP Created                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          N/A
-  2.0       5/16/2013   Note about software update added to Appendix B. Updated linked Illumina Documents to current versions section 2.3 and 6.1. Removed Ampure link section 6.1. Updated consumables to reflect new prices and added pcr plates section 4.0. Adjusted man-hours calculations and run cost section 5.0. Eliminate Hardcoding language section 2.3.5. Corrected nM to uM Appendix A Initial Set Up lines 1 and 2, added reference to Appendix B, and eliminated hardcoding language substituting with current guidelines line 7. Under Appendix A PCR Program changes penultimate step to 72C 10:00. Appendix A Sequencing removed former line 3, which was a check to ensure hardcoding was in use; line 9 edited to reflect current NaOH practice; line 11 edited to reflect changes resulting from software update. Section 7.1 bullet 2 added reads and reads passing filter. Section 7.2 bullet 3 added note about technician notification. Appendix A Cleanup Normalization and Pooling line 8 changed to create pool from each plate. Use 5ul instead of 3ul. Appendix A Library QC line 1 eliminated 1:20 and 1:40 dilutions, changed to “each” pool; line 2j adjusted to load 4 plate pools on Bioanalyzer chip, line 3ki added “from Bioanalyzer”, and added line 4. Appendix A Run Monitoring line 2 eliminated hardcoding language and adjusted expected parameters reflecting lower PhiX. Removed % base composition target.   MiSeq software update, general corrections, new price quotes.
-  2.1       10/3/2013   Initial Setup 1 added “and sequencing primers”. 2 added “do not dilute seq. primers”. 6 added note on primer plate A. Sequencing 5 added “the 100 uM”.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Clarity
-  3.0       12/4/2013   Updated Illumina guides to current revision. Appendix A: Changed Sequencing 11 to show 4.0pM load. Added footnote about low concentration libraries Sequencing 9. Added info about v3 reagent kits to Sequencing 11 and Run Monitoring.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              v3 kit, change standard load conc.
-  4.0       8/11/14     Deleted Appendix on Hardcoding for 1previous MiSeq software versions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-
-  -------------------------
-  **8.0) Change Control**
-  -------------------------
-
-  --------------------------
-  **9.0) Signature Block**
-  --------------------------
-
-Written
-By:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-Date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Reviewed and Approved
-By:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-Date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-***Appendix A***
-
-Detailed 16S Protocol
-
-***Initial Set up***
+***5.2) Initial Set up***
 
 1.  Reconstitute indexed primers and sequencing primers to 100 uM. See
     Appendix D for primer design.
@@ -239,41 +173,22 @@ Detailed 16S Protocol
 2.  Prepare 100ul 10 uM aliquots of indexed primers. Do not dilute
     sequencing primers.
 
-3.  Array aliquots into four 96 well plates. Use the following scheme:
+3.  Array aliquots of indexed primers into four 96 well plates using the following scheme:
 
     a.  A701 – A712 with A501 – A508
-
     b.  A701 – A712 with B501 – B508
-
     c.  B701 – B712 with B501 – B508
-
     d.  B701 – B712 with A501 – A508
+
+Note: These primer plates can be stored at -20C and used for subsequent runs.
 
 4.  Extract template DNA and array in 96 well format leaving two wells
     open. (One for a negative water control and another for the positive
     Mock Community control)
 
-5.  Using Illumina Experiment Manager, create a sample plate for each 96
-    well plate of template. Choose indexes that correspond to one of the
-    four index pair plates above. See Appendix C for instruction on
-    creating a custom assay in IEM.
 
-6.  Using Illumina Experiment Manager, create a sample sheet for the
-    run. Ensure that index choices are compatible with one another and
-    there is sufficient diversity in the index reads so as to activate
-    both light channels every cycle. Note: Primer plate A has
-    insufficient diversity to be run alone. If sequencing 96 or fewer
-    samples, choose plate B, C, or D.
 
-7.  The MiSeq requires base diversity on every cycle. 16S is a low
-    diversity library. With MiSeq software v2.2, 16S libraries can be
-    loaded with 5% PhiX. Additionally, other high diversity samples such
-    as metagenomes can be run simultaneously. This requires manually
-    editing the sample sheet. Older software versions required
-    “hardcoding” the matrix and phasing/pre-phasing values. See Appendix
-    B.
-
-***PCR***
+***5.3) PCR***
 
 Note: These steps may be performed using an epMotion or similar
 automated pipetting system.
@@ -285,18 +200,16 @@ automated pipetting system.
     to the corresponding well on the PCR plate.
 
 3.  Using a multichannel pipette, transfer 2 ul of each paired set of
-    index primers to the corresponding well on the PCR plate. Be sure to
+    index primers from the primer plate to the corresponding well on the PCR plate. Be sure to
     follow the layout chosen in the sample sheet.
 
-4.  Add 1 ul of PCR grade dH~2~O to the negative control well, and 1 ul
+4.  Add 1 ul of PCR grade H~2~O to the negative control well, and 1 ul
     of Mock Community at a 1:3 dilution to the positive control well.
 
 5.  Repeat for up to four 96 well plates. Seal plates, vortex briefly
     and spin down contents.
 
 6.  Place in thermocycler.
-
-***PCR Program***
 
 Use the following program:
 
@@ -305,17 +218,16 @@ Use the following program:
 >
 > 95C 00:20\
 > 55C 00:15\
-> 72C 5:00
->
-> ----------------------------
+> 72C 5:00\
+> ----------------------
 >
 > 72C 10:00\
-> 4C  end
+> 4C Hold
 
 ***Gel Electrophoresis***
 
-1.  A random row of 12 should be selected from each PCR plate and run on
-    a gel to confirm success of the PCR.
+1.  1 or 2 random rows of 12 should be selected from each PCR plate and run on
+    a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)
 
 2.  Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.
 
@@ -334,14 +246,14 @@ Use the SequalPrep Normalization Plate Kit
 2.  Add 18 ul of Binding Buffer. Mix by pipetting, sealing, vortexing,
     and spinning briefly.
 
-3.  Incubate at room temperature for 60 minutes. Note: can incubate
-    overnight if needed. Extra time does not improve results.
+3.  Incubate at room temperature for 60 minutes. Plate can be incubated 
+    overnight at 4C if needed. Extra time does not improve results.
 
-4.  Aspirate the liquid from the wells. Do not scrape the sides.
+4.  Aspirate the liquid from the wells. Do not scrape the sides. 
 
 5.  Add 50 ul of Wash Buffer and pipette up and down twice, then
-    aspirate immediately. Ensure there is no residual wash buffer in any
-    wells.
+    aspirate immediately. Invert and tap plate on a paper towel to 
+    Ensure there is no residual wash buffer in any wells.
 
 6.  Add 20 ul of Elution Buffer. Mix by pipetting up and down 5 times.
     Seal, vortex, and spin briefly.
@@ -354,10 +266,10 @@ Use the SequalPrep Normalization Plate Kit
 
 9.  Freeze the remaining sample for later use.
 
-***Library QC***
+***Library QC & Quantification***
 
 1.  Prepare the following dilutions of each pooled library in PCR grade
-    H~2~O:
+    H~2~O (or 10nM Tris-HCl + 0.05% Tween20):
 
     a.  1:1
 
@@ -369,7 +281,7 @@ Use the SequalPrep Normalization Plate Kit
 
     e.  1:4000
 
-2.  Agilent Bioanalyzer Trace
+2.  (Optional) Agilent Bioanalyzer Trace
 
     a.  Prepare Gel-Dye mix if not already prepared.
 
@@ -411,8 +323,19 @@ Use the SequalPrep Normalization Plate Kit
         sample names/dilutions for each of the test wells. Click Start.
 
     m.  Print .pdf when run finishes.
+    
+3.  (Optional) Gel Purification
 
-3.  Kapa Q-PCR Library Quantification
+    a.
+    
+    b.
+    
+    c.
+    
+    d.
+    
+
+4.  Kapa Q-PCR Library Quantification
 
     a.  Before Q-PCR reaction setup, add 1 ml Primer Premix (10X) to the
         5 ml bottle of KAPA SYBR® FAST Q-PCR Master Mix (2X) and mix by
@@ -490,10 +413,9 @@ Use the SequalPrep Normalization Plate Kit
         iii. Do not include outliers in calculation. If there is more
             than one outlier in a group, the assay must be repeated.
 
-4.  Create normalized pools from each plate by diluting to the
-    concentration of the least concentrated plate. Create a single final
-    pool by adding equal amounts of each post qpcr normalized pool.
-    Final pool must be \>10ul in total volume. 40-80ul is ideal.
+5.  Create a single final library by pooling each of the 4 pooled plates into a single 
+    well.  Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. 
+    Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \>1nM library is ideal)
 
 ***Sequencing***
 
@@ -616,9 +538,32 @@ Use the SequalPrep Normalization Plate Kit
 5.  Confirm with investigator that data are of sufficient quality and
     quantity.
 
-***Appendix B***
+  ---------------------------------------------------------------
+  **Appendix A: Adding An Assay To Illumina Experiment Manager**
+  ---------------------------------------------------------------
 
-Adding An Assay To Illumina Experiment Manager
+5.  Using Illumina Experiment Manager, create a sample plate for each 96
+    well plate of template. Choose indexes that correspond to one of the
+    four index pair plates above. See Appendix C for instruction on
+    creating a custom assay in IEM.
+
+6.  Using Illumina Experiment Manager, create a sample sheet for the
+    run. Ensure that index choices are compatible with one another and
+    there is sufficient diversity in the index reads so as to activate
+    both light channels every cycle. Note: Primer plate A has
+    insufficient diversity to be run alone. If sequencing 96 or fewer
+    samples, choose plate B, C, or D.
+
+7.  The MiSeq requires base diversity on every cycle. 16S is a low
+    diversity library. With MiSeq software v2.2, 16S libraries can be
+    loaded with 5% PhiX. Additionally, other high diversity samples such
+    as metagenomes can be run simultaneously. This requires manually
+    editing the sample sheet. Older software versions required
+    “hardcoding” the matrix and phasing/pre-phasing values. See Appendix
+    B.
+
+
+
 
 Introduction
 
@@ -666,9 +611,11 @@ Procedure
 
 11. Add a line at to the bottom with the text “Schloss”
 
-***Appendix C***
+  -----------------------------
+  **Appendix B: Primer design**
+  -----------------------------
 
-Primer design
+
 
 Overall design considerations
 

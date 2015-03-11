@@ -92,32 +92,42 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </table>
 <p><strong><em>1.1) Introduction</em></strong></p>
 <ul>
+<li><p>The Purpose of this protocol is to define the steps and estimated costs for the preparation and sequencing of 16S rRNA gene sequence libraries using the Illumina MiSeq sequencing platform.</p></li>
 <li><p>The Illumina MiSeq Personal Sequencer can produce 2 x 250 paired-end reads and up to 8.5 Gb of data in a single run. Dual indexing of library samples allows up to 384 samples to be run simultaneously. The instrument is capable of producing in excess of 24 million reads, however, for low diversity runs about 12 million reads can be expected. A wide range of applications is possible including 16S analysis, metagenomics, genome sequencing, transcriptomics, and RNA sequencing.</p></li>
 <li><p>There are several steps in preparing samples for sequencing on the MiSeq. Broadly, these include library generation and indexing, quality control, normalization and pooling, quantification, sequencing, run quality assessment, and data export.</p></li>
 </ul>
 <p><strong><em>1.2) 16S Prep Workflow</em></strong></p>
+<pre><code>This section is an overview of the steps involved in library preparation.  
+For a more detailed desctiption of the mehods, see Section 5 below.</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>Extracted DNA should be arrayed in 96 well plate format. If possible, leave two wells on each plate open for controls.</p></li>
-<li><p>PCR of 16S samples with Schloss lab indices. Each plate will contain a negative control (water) and a positive control (mock community)</p></li>
-<li><p>A subset of 12-24 samples from each plate will undergo electrophoresis on a 1% agarose gel to ensure amplification proceeded normally.</p></li>
-<li><p>Library clean up and normalization performed using the Invitrogen <a href="http://products.invitrogen.com/ivgn/product/A1051001">SequalPrep</a> Plate Normalization Kit.</p></li>
-<li><p>Samples from each plate are pooled into single wells (i.e. 1 well/plate, 4 wells total for a run with 4 plates).</p></li>
+<li><p>Extracted DNA should be arrayed in 96 well plate format, preferably with two wells on each plate open for controls.</p></li>
+<li><p>Samples are PCR amplified with Schloss lab indices. Each plate should contain a negative control (water) and a positive control (mock community)</p></li>
+<li><p>A subset of 12-24 samples from each plate undergoes electrophoresis on a 1% agarose gel to ensure amplification proceeded normally.</p></li>
+<li><p>Library clean up and normalization is performed using the Invitrogen <a href="http://products.invitrogen.com/ivgn/product/A1051001">SequalPrep</a> Plate Normalization Kit.</p></li>
+<li><p>Samples from each plate are pooled into single wells (i.e. 1 well/plate).</p></li>
 <li><p>(Optional) To assess the quality of the library, the investigator may choose to perform a Bioanalyzer trace using the <a href="http://www.genomics.agilent.com/CollectionSubpage.aspx?PageType=Product&amp;SubPageType=ProductDetail&amp;PageID=1635">Agilent Technologies HS DNAkit</a> cat# 5067-4626.</p></li>
-<li><p>(Optional) If the post-PCR gel or the Bioanalyzer trace suggests contaminant DNA from leftover indices/primer-dimer, an additional gel purification of the pooled plates is recommended. This often imporves the quality of the sequencing run.</p></li>
+<li><p>(Optional) If the post-PCR gel or the Bioanalyzer trace suggests contaminant DNA from leftover indices/primer-dimer, an additional gel purification of the pooled plates is recommended. This often improves the quality of the sequencing run.</p></li>
 <li><p>Each pooled plate is quantified using a KAPA Biosystems <a href="http://www.kapabiosystems.com/products/name/kapa-library-quant-kits">Q-PCR kit</a> cat# KK4824.</p></li>
 <li><p>Plates are pooled to equal concentration into a single well (i.e. 1 well per run)</p></li>
 <li><p>The pooled library enters the Sequencing Workflow.</p></li>
 </ol>
 <p><strong><em>1.3) Sequencing Workflow</em></strong></p>
+<pre><code>This section is an overview of the steps involved in initiating a sequencing run.  
+For a more detailed desctiption of the mehods, see Section 5 below.</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>A Sample Plate is created for each plate using Illumina Experiment Manager. Sample Plates are then used to create a Sample Sheet. This sheet serves as the set of run parameters and indexing scheme used by the MiSeq for the run. The sample sheet is then transferred to the MiSeq via flash drive.</p></li>
 <li><p>The reagent cartridge is thawed in a water bath per the <a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf">MiSeq User Guide</a>.</p></li>
-<li><p>Unless otherwise specified, dilution and loading will follow the steps outlined in the document: Preparing DNA Libraries for Sequencing on the MiSeq<a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing_libraries_for_miseq_15039740_c.pdf">(15039740 C)</a></p></li>
-<li><p>Any custom primers required (including those for 16S) will be mixed with the native primers on the reagent cartridge.</p></li>
-<li><p>The technician will load the sample sheet, flow cell, reagent cartridge, PR2 bottle, and an empty waste bottle onto the MiSeq and start the run. A 500 cycle run takes approx. 44 hours.</p></li>
-<li><p>The technician will monitor the run using Illumina Sequence Analysis Viewer.</p></li>
-<li><p>The data will be stored on the Schloss Lab NAS drive and made available to the investigator following run completion. Unless otherwise requested, default output will be fastq files.</p></li>
-<li><p>Technician will perform a post run wash and any required maintenance of instrument.</p></li>
+<li>Unless otherwise specified, dilution and loading will follow the steps outlined in the document: <a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf">Preparing DNA Libraries for Sequencing on the MiSeq</a>
+<ol style="list-style-type: lower-alpha">
+<li>Pooled library and PhiX control are denatured and diluted.<br /></li>
+<li>Diluted library and PhiX are pooled (5-10% PhiX, 90-95% Library).<br /></li>
+<li>Sequencing pimers and library/PhiX are loaded into the reagent cartridge.<br /></li>
+<li>MiSeq flow cell is washed</li>
+</ol></li>
+<li><p>The sample sheet, flow cell, reagent cartridge, PR2 bottle, and an empty waste bottle are loaded onto the MiSeq, and the run is initiated. A 500 cycle run takes approx. 44 hours.</p></li>
+<li><p>The run is monitored using Illumina Sequence Analysis Viewer.</p></li>
+<li><p>Upon completions of the run, fastq files are transfered to the Schloss Lab NAS drive.</p></li>
+<li><p>A post run wash is performed, followed by a standby wash if the machine will be idle for a week or more.</p></li>
 </ol>
 <table>
 <tbody>
@@ -130,7 +140,6 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>The Schloss Lab Chemical Hygiene Plan should be followed at all times.</p></li>
 <li><p>Standard PPE (nitrile gloves, safety glasses, and lab coat) should be used at all times.</p></li>
 <li><p>Each reagent cartridge contains a small amount of formamide and must be disposed of in an appropriate container following the run. Liquid waste from a run must also be disposed of as hazardous due to the formamide content.</p></li>
-<li><p>All other safety concerns may be addressed to the lab chemical safety officer.</p></li>
 </ul>
 <table>
 <tbody>
@@ -169,46 +178,51 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <td align="left">$41.71</td>
 </tr>
 <tr class="odd">
-<td align="left">AccuPrime™ Pfx SuperMix 200rxns</td>
+<td align="left">AccuPrime™ Pfx SuperMix (200rxns)</td>
 <td align="left">12344-040</td>
 <td align="left">$331.28</td>
 </tr>
 <tr class="even">
-<td align="left">Agilent High Sensitivity DNA Kit</td>
-<td align="left">5067-4626</td>
-<td align="left">$434.70</td>
-</tr>
-<tr class="odd">
 <td align="left">Library Quantification Kit - Illumina/Universal</td>
 <td align="left">KK4824</td>
 <td align="left">$575.00</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">SequalPrep™ Normalization Plate (96) Kit</td>
 <td align="left">A10510-01</td>
 <td align="left">$453.60</td>
 </tr>
+<tr class="even">
+<td align="left">(optional) Agilent High Sensitivity DNA Kit</td>
+<td align="left">5067-4626</td>
+<td align="left">$434.70</td>
+</tr>
 <tr class="odd">
+<td align="left">(optional) QIAquick Gel Extraction Kit (50 rxns)</td>
+<td align="left">28704</td>
+<td align="left">$111.00</td>
+</tr>
+<tr class="even">
 <td align="left">epT.I.P.S. Motion 1-50 uL Reloads 24 racks of 96 tips</td>
 <td align="left">30014421</td>
 <td align="left">$190.00</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Tip One Refill Wafers 200uL elongated graduated</td>
 <td align="left">NC9549602</td>
 <td align="left">$39.24</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Tip One Refill Wafers 1000uL graduated</td>
 <td align="left">1111-2721</td>
 <td align="left">$25.25</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Fisher 1N NaOH 1L</td>
 <td align="left">SS266-1</td>
 <td align="left">$46.32</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">TWIN.TEC 96 Well Plate Skirted Blue</td>
 <td align="left">E951020460</td>
 <td align="left">$99.23</td>
@@ -227,12 +241,10 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <tr class="header">
 <th align="left">For 384 sample run</th>
 <th align="left">PCR and Indexing</th>
-<th align="left">Cleanup Pooling &amp; Normalization</th>
+<th align="left">Cleanup &amp; Normalization</th>
 <th align="left">Library QC</th>
 <th align="left">Sequencing</th>
 <th align="left">Totals</th>
-<th align="left">Total Cost with Man Hours</th>
-<th align="left">Duration (days)</th>
 </tr>
 </thead>
 <tbody>
@@ -243,8 +255,6 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <td align="left">$138</td>
 <td align="left">$941</td>
 <td align="left">$1932</td>
-<td align="left">$2,232</td>
-<td align="left">4.5 days</td>
 </tr>
 <tr class="even">
 <td align="left">16S Man hours</td>
@@ -253,15 +263,13 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <td align="left">4</td>
 <td align="left">4</td>
 <td align="left">15</td>
-<td align="left"></td>
-<td align="left"></td>
 </tr>
 </tbody>
 </table>
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><strong>5.0) Method(s)</strong></td>
+<td align="left"><strong>5.0) Detailed Method(s)</strong></td>
 </tr>
 </tbody>
 </table>
@@ -269,135 +277,50 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <ul>
 <li><p>The following methods and references are used in the workflows above.</p>
 <ul>
-<li><p><a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf">MiSeq User Guide</a> Rev. L</p></li>
-<li><p>Preparing DNA Libraries for Sequencing on the MiSeq<a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing_libraries_for_miseq_15039740_c.pdf">(15039740 C)</a></p></li>
-<li><p>Kapa Biosystems Q-PCR Library <a href="http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf">Quantification Kit</a> Illumina</p></li>
-<li><p>Accuprime Pfx <a href="http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf">Super Mix</a></p></li>
-<li><p>Agilent High Sensitivity DNA Kit Guide</p></li>
-<li><p>SequalPrep Normalization Plate (96) Kit</p></li>
+<li><p><a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf">MiSeq User Guide</a></p></li>
+<li><p><a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf">Preparing DNA Libraries for Sequencing on the MiSeq</a></p></li>
+<li><p><a href="http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf">Kapa Biosystems Q-PCR Library Quantification Kit Illumina</a></p></li>
+<li><p><a href="http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf">Accuprime Pfx Super Mix</a></p></li>
+<li><p><a href="http://tools.lifetechnologies.com/content/sfs/manuals/sequalprep_platekit_man.pdf">SequalPrep Normalization Plate (96) Kit</a></p></li>
+<li><p><a href="http://www.chem.agilent.com/library/usermanuals/Public/G2938-90321_SensitivityDNA_KG_EN.pdf">Agilent High Sensitivity DNA Kit Guide</a></p></li>
+<li><p><a href="https://www.qiagen.com/us/resources/download.aspx?id=f4ba2d24-8218-452c-ad6f-1b6f43194425&amp;lang=en">QIAquick Gel Extraction Kit</a></p></li>
 </ul></li>
 </ul>
-<p><strong><em>5.2) Working Protocols</em></strong></p>
-<ul>
-<li>A Detailed protocol for the 16S workflow can be found in Appendix A.</li>
-</ul>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>6.0) Data Analysis</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong><em>6.1) During Run</em></strong></p>
-<ul>
-<li><p>The Technician will monitor the run using Illumina Sequence Analysis Viewer.</p></li>
-<li><p>To asses run quality, the technician will review the following data: cluster density, clusters passing filter, data yield, Q30 Score, intensity, corrected intensity, % base composition, % aligned, reads, reads passing filter, and indices identified following index reads.</p></li>
-<li><p>The tolerances for the preceding data are run type dependent. The investigator will consult the technician prior to the run to determine these values.</p></li>
-</ul>
-<p><strong><em>6.2) Post Run</em></strong></p>
-<ul>
-<li><p>The default repository for run data is the “runs” folder on the Schloss Lab NAS Drive.</p></li>
-<li><p>Investigators wishing for personal copies of fastq files must provide the technician with storage media.</p></li>
-<li><p>The investigator will determine whether sufficient coverage and quality have been achieved or if there is a need for re-sequencing, and notify the technician immediately.</p></li>
-<li><p>It is recommended that investigators use <a href="http://www.mothur.org/">mothur</a> for fastq analysis.</p></li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Version</th>
-<th align="left">Date</th>
-<th align="left">Change</th>
-<th align="left">Reason</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">1.0</td>
-<td align="left">3/18/2013</td>
-<td align="left">SOP Created</td>
-<td align="left">N/A</td>
-</tr>
-<tr class="even">
-<td align="left">2.0</td>
-<td align="left">5/16/2013</td>
-<td align="left">Note about software update added to Appendix B. Updated linked Illumina Documents to current versions section 2.3 and 6.1. Removed Ampure link section 6.1. Updated consumables to reflect new prices and added pcr plates section 4.0. Adjusted man-hours calculations and run cost section 5.0. Eliminate Hardcoding language section 2.3.5. Corrected nM to uM Appendix A Initial Set Up lines 1 and 2, added reference to Appendix B, and eliminated hardcoding language substituting with current guidelines line 7. Under Appendix A PCR Program changes penultimate step to 72C 10:00. Appendix A Sequencing removed former line 3, which was a check to ensure hardcoding was in use; line 9 edited to reflect current NaOH practice; line 11 edited to reflect changes resulting from software update. Section 7.1 bullet 2 added reads and reads passing filter. Section 7.2 bullet 3 added note about technician notification. Appendix A Cleanup Normalization and Pooling line 8 changed to create pool from each plate. Use 5ul instead of 3ul. Appendix A Library QC line 1 eliminated 1:20 and 1:40 dilutions, changed to “each” pool; line 2j adjusted to load 4 plate pools on Bioanalyzer chip, line 3ki added “from Bioanalyzer”, and added line 4. Appendix A Run Monitoring line 2 eliminated hardcoding language and adjusted expected parameters reflecting lower PhiX. Removed % base composition target.</td>
-<td align="left">MiSeq software update, general corrections, new price quotes.</td>
-</tr>
-<tr class="odd">
-<td align="left">2.1</td>
-<td align="left">10/3/2013</td>
-<td align="left">Initial Setup 1 added “and sequencing primers”. 2 added “do not dilute seq. primers”. 6 added note on primer plate A. Sequencing 5 added “the 100 uM”.</td>
-<td align="left">Clarity</td>
-</tr>
-<tr class="even">
-<td align="left">3.0</td>
-<td align="left">12/4/2013</td>
-<td align="left">Updated Illumina guides to current revision. Appendix A: Changed Sequencing 11 to show 4.0pM load. Added footnote about low concentration libraries Sequencing 9. Added info about v3 reagent kits to Sequencing 11 and Run Monitoring.</td>
-<td align="left">v3 kit, change standard load conc.</td>
-</tr>
-<tr class="odd">
-<td align="left">4.0</td>
-<td align="left">8/11/14</td>
-<td align="left">Deleted Appendix on Hardcoding for 1previous MiSeq software versions.</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>8.0) Change Control</strong></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>9.0) Signature Block</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Written By:_________________________________________________ Date: ________________</p>
-<p>Reviewed and Approved By:___________________________________ Date: ________________</p>
-<p><strong><em>Appendix A</em></strong></p>
-<p>Detailed 16S Protocol</p>
-<p><strong><em>Initial Set up</em></strong></p>
+<p><strong><em>5.2) Initial Set up</em></strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Reconstitute indexed primers and sequencing primers to 100 uM. See Appendix D for primer design.</p></li>
 <li><p>Prepare 100ul 10 uM aliquots of indexed primers. Do not dilute sequencing primers.</p></li>
-<li><p>Array aliquots into four 96 well plates. Use the following scheme:</p>
+<li><p>Array aliquots of indexed primers into four 96 well plates using the following scheme:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>A701 – A712 with A501 – A508</p></li>
-<li><p>A701 – A712 with B501 – B508</p></li>
-<li><p>B701 – B712 with B501 – B508</p></li>
-<li><p>B701 – B712 with A501 – A508</p></li>
+<li>A701 – A712 with A501 – A508</li>
+<li>A701 – A712 with B501 – B508</li>
+<li>B701 – B712 with B501 – B508</li>
+<li>B701 – B712 with A501 – A508</li>
 </ol></li>
-<li><p>Extract template DNA and array in 96 well format leaving two wells open. (One for a negative water control and another for the positive Mock Community control)</p></li>
-<li><p>Using Illumina Experiment Manager, create a sample plate for each 96 well plate of template. Choose indexes that correspond to one of the four index pair plates above. See Appendix C for instruction on creating a custom assay in IEM.</p></li>
-<li><p>Using Illumina Experiment Manager, create a sample sheet for the run. Ensure that index choices are compatible with one another and there is sufficient diversity in the index reads so as to activate both light channels every cycle. Note: Primer plate A has insufficient diversity to be run alone. If sequencing 96 or fewer samples, choose plate B, C, or D.</p></li>
-<li><p>The MiSeq requires base diversity on every cycle. 16S is a low diversity library. With MiSeq software v2.2, 16S libraries can be loaded with 5% PhiX. Additionally, other high diversity samples such as metagenomes can be run simultaneously. This requires manually editing the sample sheet. Older software versions required “hardcoding” the matrix and phasing/pre-phasing values. See Appendix B.</p></li>
 </ol>
-<p><strong><em>PCR</em></strong></p>
+<p>Note: These primer plates can be stored at -20C and used for subsequent runs.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Extract template DNA and array in 96 well format leaving two wells open. (One for a negative water control and another for the positive Mock Community control)</li>
+</ol>
+<p><strong><em>5.3) PCR</em></strong></p>
 <p>Note: These steps may be performed using an epMotion or similar automated pipetting system.</p>
 <ol style="list-style-type: decimal">
 <li><p>Dispense 17 ul of Accuprime Pfx Supermix into each well of a new 96 well plate.</p></li>
 <li><p>Using a multichannel pipette, transfer 1 ul of template DNA per well to the corresponding well on the PCR plate.</p></li>
-<li><p>Using a multichannel pipette, transfer 2 ul of each paired set of index primers to the corresponding well on the PCR plate. Be sure to follow the layout chosen in the sample sheet.</p></li>
-<li><p>Add 1 ul of PCR grade dH<sub>2</sub>O to the negative control well, and 1 ul of Mock Community at a 1:3 dilution to the positive control well.</p></li>
+<li><p>Using a multichannel pipette, transfer 2 ul of each paired set of index primers from the primer plate to the corresponding well on the PCR plate. Be sure to follow the layout chosen in the sample sheet.</p></li>
+<li><p>Add 1 ul of PCR grade H<sub>2</sub>O to the negative control well, and 1 ul of Mock Community at a 1:3 dilution to the positive control well.</p></li>
 <li><p>Repeat for up to four 96 well plates. Seal plates, vortex briefly and spin down contents.</p></li>
 <li><p>Place in thermocycler.</p></li>
 </ol>
-<p><strong><em>PCR Program</em></strong></p>
 <p>Use the following program:</p>
 <blockquote>
 <p>95C 2:00<br />——–30 cycles——–</p>
-<p>95C 00:20<br />55C 00:15<br />72C 5:00</p>
-<hr />
-<p>72C 10:00<br />4C  end</p>
+<p>95C 00:20<br />55C 00:15<br />72C 5:00<br />———————-</p>
+<p>72C 10:00<br />4C Hold</p>
 </blockquote>
 <p><strong><em>Gel Electrophoresis</em></strong></p>
 <ol style="list-style-type: decimal">
-<li><p>A random row of 12 should be selected from each PCR plate and run on a gel to confirm success of the PCR.</p></li>
+<li><p>1 or 2 random rows of 12 should be selected from each PCR plate and run on a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)</p></li>
 <li><p>Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.</p></li>
 <li><p>Run at 100v for 30 minutes alongside a standard ladder.</p></li>
 <li><p>Photograph gel under UV. Check to be sure there is a band for every well.</p></li>
@@ -407,17 +330,17 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <ol style="list-style-type: decimal">
 <li><p>Transfer 18 ul of PCR product from PCR plate to corresponding well on the normalization plate.</p></li>
 <li><p>Add 18 ul of Binding Buffer. Mix by pipetting, sealing, vortexing, and spinning briefly.</p></li>
-<li><p>Incubate at room temperature for 60 minutes. Note: can incubate overnight if needed. Extra time does not improve results.</p></li>
+<li><p>Incubate at room temperature for 60 minutes. Plate can be incubated overnight at 4C if needed. Extra time does not improve results.</p></li>
 <li><p>Aspirate the liquid from the wells. Do not scrape the sides.</p></li>
-<li><p>Add 50 ul of Wash Buffer and pipette up and down twice, then aspirate immediately. Ensure there is no residual wash buffer in any wells.</p></li>
+<li><p>Add 50 ul of Wash Buffer and pipette up and down twice, then aspirate immediately. Invert and tap plate on a paper towel to Ensure there is no residual wash buffer in any wells.</p></li>
 <li><p>Add 20 ul of Elution Buffer. Mix by pipetting up and down 5 times. Seal, vortex, and spin briefly.</p></li>
 <li><p>Incubate at room temperature for 5 minutes.</p></li>
 <li><p>Create a pool from each plate. Take 5 ul of each well to pool. The use of an empty 96 well plate may facilitate the use of multichannel pipettes.</p></li>
 <li><p>Freeze the remaining sample for later use.</p></li>
 </ol>
-<p><strong><em>Library QC</em></strong></p>
+<p><strong><em>Library QC &amp; Quantification</em></strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Prepare the following dilutions of each pooled library in PCR grade H<sub>2</sub>O:</p>
+<li><p>Prepare the following dilutions of each pooled library in PCR grade H<sub>2</sub>O (or 10nM Tris-HCl + 0.05% Tween20):</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>1:1</p></li>
 <li><p>1:10</p></li>
@@ -425,7 +348,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>1:2000</p></li>
 <li><p>1:4000</p></li>
 </ol></li>
-<li><p>Agilent Bioanalyzer Trace</p>
+<li><p>(Optional) Agilent Bioanalyzer Trace</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Prepare Gel-Dye mix if not already prepared.</p></li>
 <li><p>Let reagents equilibrate to room temperature.</p></li>
@@ -443,6 +366,13 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Place chip in the designated vortex for 1 minute, then transfer chip to the Bioanalyzer.</p></li>
 <li><p>Open the 2100 Expert software and select the HS DNA Assay. Enter sample names/dilutions for each of the test wells. Click Start.</p></li>
 <li><p>Print .pdf when run finishes.</p></li>
+</ol></li>
+<li><p>(Optional) Gel Purification</p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
 </ol></li>
 <li><p>Kapa Q-PCR Library Quantification</p>
 <ol style="list-style-type: lower-alpha">
@@ -482,7 +412,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Do not include outliers in calculation. If there is more than one outlier in a group, the assay must be repeated.</p></li>
 </ol></li>
 </ol></li>
-<li><p>Create normalized pools from each plate by diluting to the concentration of the least concentrated plate. Create a single final pool by adding equal amounts of each post qpcr normalized pool. Final pool must be &gt;10ul in total volume. 40-80ul is ideal.</p></li>
+<li><p>Create a single final library by pooling each of the 4 pooled plates into a single well. Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. Hint: C<sub>1</sub> V<sub>1</sub> = C<sub>2</sub> V<sub>2</sub> ). Final pool must be &gt;10ul in total volume (40-80ul of &gt;1nM library is ideal)</p></li>
 </ol>
 <p><strong><em>Sequencing</em></strong></p>
 <ol style="list-style-type: decimal">
@@ -538,8 +468,18 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Perform maintenance wash if required.</p></li>
 <li><p>Confirm with investigator that data are of sufficient quality and quantity.</p></li>
 </ol>
-<p><strong><em>Appendix B</em></strong></p>
-<p>Adding An Assay To Illumina Experiment Manager</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Appendix A: Adding An Assay To Illumina Experiment Manager</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Using Illumina Experiment Manager, create a sample plate for each 96 well plate of template. Choose indexes that correspond to one of the four index pair plates above. See Appendix C for instruction on creating a custom assay in IEM.</p></li>
+<li><p>Using Illumina Experiment Manager, create a sample sheet for the run. Ensure that index choices are compatible with one another and there is sufficient diversity in the index reads so as to activate both light channels every cycle. Note: Primer plate A has insufficient diversity to be run alone. If sequencing 96 or fewer samples, choose plate B, C, or D.</p></li>
+<li><p>The MiSeq requires base diversity on every cycle. 16S is a low diversity library. With MiSeq software v2.2, 16S libraries can be loaded with 5% PhiX. Additionally, other high diversity samples such as metagenomes can be run simultaneously. This requires manually editing the sample sheet. Older software versions required “hardcoding” the matrix and phasing/pre-phasing values. See Appendix B.</p></li>
+</ol>
 <p>Introduction</p>
 <p>Illumina Experiment Manager is used to generate sample plates and sheets. A new assay must be added to the system to efficiently prepare sample sheets for 16S sequencing. Not only does this eliminate the need to manually assemble a sample sheet for 16S runs, but allows the user to retain use of the IEM index analysis feature. This ensures the indices selected for a particular run have sufficient diversity on a cycle-by-cycle basis and will successfully demultiplex.</p>
 <p>Procedure</p>
@@ -556,8 +496,13 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Return to the IEM folder and open the Applications folder. Open and edit the file GenerateFASTQ.txt.</p></li>
 <li><p>Add a line at to the bottom with the text “Schloss”</p></li>
 </ol>
-<p><strong><em>Appendix C</em></strong></p>
-<p>Primer design</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Appendix B: Primer design</strong></td>
+</tr>
+</tbody>
+</table>
 <p>Overall design considerations</p>
 <ul>
 <li><p>The sequencing primers must have a melting temperature near 65°C. This can be achieved by altering the pad sequence</p></li>
