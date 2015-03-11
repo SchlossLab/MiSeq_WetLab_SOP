@@ -187,7 +187,7 @@ layout: post
     c.  B701 – B712 with B501 – B508
     d.  B701 – B712 with A501 – A508
 
-Note: These primer plates can be stored at -20C and used for subsequent runs.
+Note: These primer plates can be stored at -20°C and used for subsequent runs.
 
 4.  Extract template DNA and array in 96 well format leaving two wells
     open. (One for a negative water control and another for the positive
@@ -220,18 +220,18 @@ automated pipetting system.
 
 Use the following program:
 
-> 95C 2:00\
+> 95°C 2:00\
 > --------30 cycles--------
 >
-> 95C 00:20\
-> 55C 00:15\
-> 72C 5:00\
+> 95°C 00:20\
+> 55°C 00:15\
+> 72°C 5:00\
 > ----------------------
 >
-> 72C 10:00\
-> 4C Hold
+> 72°C 10:00\
+> 4°C Hold
 
-***Gel Electrophoresis***
+***5.4) Gel Electrophoresis***
 
 1.  1 or 2 random rows of 12 should be selected from each PCR plate and run on
     a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)
@@ -243,7 +243,7 @@ Use the following program:
 4.  Photograph gel under UV. Check to be sure there is a band for every
     well.
 
-***Cleanup, Normalization, and Pooling***
+***5.6) Cleanup, Normalization, and Pooling***
 
 Use the SequalPrep Normalization Plate Kit
 
@@ -273,7 +273,7 @@ Use the SequalPrep Normalization Plate Kit
 
 9.  Freeze the remaining sample for later use.
 
-***Library QC & Quantification***
+***5.7) Library QC & Quantification***
 
 1.  Prepare the following dilutions of each pooled library in PCR grade
     H~2~O (or 10nM Tris-HCl + 0.05% Tween20):
@@ -367,13 +367,13 @@ Use the SequalPrep Normalization Plate Kit
 
     g.  Program the following cycle
 
-        i.  Initial Activation 95 °C 5 minutes
+        i.  Initial Activation 95°C 5 minutes
 
         ii. 35 cycles
 
-            1.  Denaturation 95 °C 30 seconds
+            1.  Denaturation 95°C 30 seconds
 
-            2.  Annealing 60 °C 45 seconds
+            2.  Annealing 60°C 45 seconds
 
             3.  If library fragment size exceeds 700bp, extend annealing
                 step to 90 seconds.
@@ -422,13 +422,13 @@ Use the SequalPrep Normalization Plate Kit
 
 5.  Create a single final library by pooling each of the 4 pooled plates into a single 
     well.  Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. 
-    Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \≥2nM library is ideal)
+    Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \>1nM library is ideal)
 
-***Sequencing***
+***5.8) Sequencing***
 
-1.  Remove a 500 cycle reagent cartridge from the -20 **°**C freezer.
+1.  Remove a 500 cycle reagent cartridge from the -20°C freezer.
     Place in room temperature water bath for one hour. Place HT1 buffer
-    tube in 4 **°**C fridge.
+    tube in 4°C fridge.
 
 2.  Copy sample sheet to sample sheet folder on MiSeq. Rename sample
     sheet to match barcode of reagent cartridge.
@@ -509,7 +509,7 @@ Use the SequalPrep Normalization Plate Kit
 
 19. Wait for the MiSeq to perform its pre-run checks, and press start.
 
-***Run Monitoring***
+***5.9) Run Monitoring***
 
 1.  The run should be monitored periodically using Illumina Sequence
     Analysis Viewer.
@@ -530,7 +530,7 @@ Use the SequalPrep Normalization Plate Kit
 
     g.  Final \>Q30 score of \>70%
 
-***Final Steps***
+***5.10) Final Steps***
 
 1.  Perform post run wash.
 
@@ -621,8 +621,6 @@ Procedure
   -----------------------------
   **Appendix B: Primer design**
   -----------------------------
-
-
 
 Overall design considerations
 
