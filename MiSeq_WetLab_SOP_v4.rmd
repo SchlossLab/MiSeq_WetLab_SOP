@@ -88,10 +88,10 @@ layout: post
 
 3.  Unless otherwise specified, dilution and loading will follow the
     steps outlined in the document: [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)  
-      a.) Pooled library and PhiX control are denatured and diluted.  
-      b.) Diluted library and PhiX are pooled (5-10% PhiX, 90-95% Library).  
-      c.) Sequencing pimers and library/PhiX are loaded into the reagent cartridge.  
-      d.) MiSeq flow cell is washed  
+      a. Pooled library and PhiX control are denatured and diluted.  
+      b. Diluted library and PhiX are pooled (5-10% PhiX, 90-95% Library).  
+      c. Sequencing pimers and library/PhiX are loaded into the reagent cartridge.  
+      d. MiSeq flow cell is washed  
 
 4.  The sample sheet, flow cell, reagent cartridge, PR2 bottle, and an empty waste bottle 
     are loaded onto the MiSeq, and the run is initiated. A 500 cycle run takes approx. 44 hours.
@@ -210,7 +210,7 @@ automated pipetting system.
     index primers from the primer plate to the corresponding well on the PCR plate. Be sure to
     follow the layout chosen in the sample sheet.
 
-4.  Add 1 ul of PCR grade dH~2~O to the negative control well, and 1 ul
+4.  Add 1 ul of PCR grade H~2~O to the negative control well, and 1 ul
     of Mock Community at a 1:3 dilution to the positive control well.
 
 5.  Repeat for up to four 96 well plates. Seal plates, vortex briefly
@@ -273,10 +273,10 @@ Use the SequalPrep Normalization Plate Kit
 
 9.  Freeze the remaining sample for later use.
 
-***Library QC***
+***Library QC & Quantification***
 
 1.  Prepare the following dilutions of each pooled library in PCR grade
-    H~2~O:
+    H~2~O (or 10nM Tris-HCl + 0.05% Tween20):
 
     a.  1:1
 
@@ -288,7 +288,7 @@ Use the SequalPrep Normalization Plate Kit
 
     e.  1:4000
 
-2.  Agilent Bioanalyzer Trace
+2.  (Optional) Agilent Bioanalyzer Trace
 
     a.  Prepare Gel-Dye mix if not already prepared.
 
@@ -330,8 +330,19 @@ Use the SequalPrep Normalization Plate Kit
         sample names/dilutions for each of the test wells. Click Start.
 
     m.  Print .pdf when run finishes.
+    
+3.  (Optional) Gel Purification
 
-3.  Kapa Q-PCR Library Quantification
+    a.
+    
+    b.
+    
+    c.
+    
+    d.
+    
+
+4.  Kapa Q-PCR Library Quantification
 
     a.  Before Q-PCR reaction setup, add 1 ml Primer Premix (10X) to the
         5 ml bottle of KAPA SYBR® FAST Q-PCR Master Mix (2X) and mix by
@@ -409,10 +420,9 @@ Use the SequalPrep Normalization Plate Kit
         iii. Do not include outliers in calculation. If there is more
             than one outlier in a group, the assay must be repeated.
 
-4.  Create normalized pools from each plate by diluting to the
-    concentration of the least concentrated plate. Create a single final
-    pool by adding equal amounts of each post qpcr normalized pool.
-    Final pool must be \>10ul in total volume. 40-80ul is ideal.
+5.  Create a single final library by pooling each of the 4 pooled plates into a single 
+    well.  Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. 
+    Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \≥2nM library is ideal)
 
 ***Sequencing***
 
