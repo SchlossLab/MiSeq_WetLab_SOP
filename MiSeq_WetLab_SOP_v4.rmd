@@ -23,6 +23,10 @@ layout: post
 
 ***1.1) Introduction***
 
+-   The Purpose of this protocol is to define the steps and estimated costs for 
+    the preparation and sequencing of 16S rRNA gene sequence libraries 
+    using the Illumina MiSeq sequencing platform.
+
 -   The Illumina MiSeq Personal Sequencer can produce 2 x 250 paired-end
     reads and up to 8.5 Gb of data in a single run. Dual indexing of
     library samples allows up to 384 samples to be run simultaneously.
@@ -112,9 +116,7 @@ layout: post
     be disposed of in an appropriate container following the run. Liquid
     waste from a run must also be disposed of as hazardous due to the
     formamide content.
-
--   All other safety concerns may be addressed to the lab chemical
-    safety officer.
+    
 
   ----------------------
   **3.0) Consumables**
