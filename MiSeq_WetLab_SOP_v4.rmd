@@ -143,10 +143,10 @@ layout: post
   **4.0) Run Costs**
   --------------------
 
-  For 384 sample run   PCR and Indexing   Cleanup Pooling & Normalization   Library QC   Sequencing   Totals   Total Cost with Man Hours   Duration (days)
-  -------------------- ------------------ --------------------------------- ------------ ------------ -------- --------------------------- -----------------
-  16S Reagents         \$588              \$265                             \$138        \$941        \$1932   \$2,232                     4.5 days
-  16S Man hours        4                  3                                 4            4            15                                   
+  For 384 sample run  PCR and Indexing  Cleanup & Normalization Library QC  Sequencing  Totals
+  ------------------  ----------------  ----------------------- ----------  ----------  ------
+  16S Reagents         \$588              \$265                 \$138        \$941      \$1932
+  16S Man hours        4                  3                      4            4            15                                   
 
   --------------------
   **5.0) Detailed Method(s)**
@@ -157,23 +157,19 @@ layout: post
 -   The following methods and references are used in the workflows
     above.
 
-    -   [MiSeq User
-        Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf)
-        Rev. L
+    -   [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf)
 
-    -   Preparing DNA Libraries for Sequencing on the MiSeq[ (15039740
-        C)](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing_libraries_for_miseq_15039740_c.pdf)
+    -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
-    -   Kapa Biosystems Q-PCR Library [Quantification
-        Kit](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
-        Illumina
+    -   [Kapa Biosystems Q-PCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
+        
+    -   [Accuprime Pfx Super Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
 
-    -   Accuprime Pfx [Super
-        Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
+    -   [SequalPrep Normalization Plate (96) Kit](http://tools.lifetechnologies.com/content/sfs/manuals/sequalprep_platekit_man.pdf)
 
-    -   Agilent High Sensitivity DNA Kit Guide
+    -   [Agilent High Sensitivity DNA Kit Guide](http://www.chem.agilent.com/library/usermanuals/Public/G2938-90321_SensitivityDNA_KG_EN.pdf)
 
-    -   SequalPrep Normalization Plate (96) Kit
+    -   [QIAquick Gel Extraction Kit](https://www.qiagen.com/us/resources/download.aspx?id=f4ba2d24-8218-452c-ad6f-1b6f43194425&lang=en)
 
 
 ***5.2) Initial Set up***
