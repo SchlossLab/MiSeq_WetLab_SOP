@@ -233,8 +233,8 @@ Use the following program:
 
 ***Gel Electrophoresis***
 
-1.  A random row of 12 should be selected from each PCR plate and run on
-    a gel to confirm success of the PCR.
+1.  1 or 2 random rows of 12 should be selected from each PCR plate and run on
+    a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)
 
 2.  Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.
 
@@ -253,14 +253,14 @@ Use the SequalPrep Normalization Plate Kit
 2.  Add 18 ul of Binding Buffer. Mix by pipetting, sealing, vortexing,
     and spinning briefly.
 
-3.  Incubate at room temperature for 60 minutes. Note: can incubate
-    overnight if needed. Extra time does not improve results.
+3.  Incubate at room temperature for 60 minutes. Plate can be incubated 
+    overnight at 4C if needed. Extra time does not improve results.
 
-4.  Aspirate the liquid from the wells. Do not scrape the sides.
+4.  Aspirate the liquid from the wells. Do not scrape the sides. 
 
 5.  Add 50 ul of Wash Buffer and pipette up and down twice, then
-    aspirate immediately. Ensure there is no residual wash buffer in any
-    wells.
+    aspirate immediately. Invert and tap plate on a paper towel to 
+    Ensure there is no residual wash buffer in any wells.
 
 6.  Add 20 ul of Elution Buffer. Mix by pipetting up and down 5 times.
     Seal, vortex, and spin briefly.
