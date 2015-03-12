@@ -68,7 +68,7 @@ layout: post
     from leftover indices/primer-dimer, an additional gel purification of the pooled 
     plates is recommended.  This often improves the quality of the sequencing run.
 
-8.  Each pooled plate is quantified using a KAPA Biosystems [Q-PCR kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits) cat\# KK4824. 
+8.  Each pooled plate is quantified using a KAPA Biosystems [qPCR kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits) cat\# KK4824. 
 
 9.  Plates are pooled to equal concentration into a single well (i.e. 1 well per run)
         
@@ -161,7 +161,7 @@ layout: post
 
     -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
-    -   [Kapa Biosystems Q-PCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
+    -   [Kapa Biosystems qPCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
         
     -   [Accuprime Pfx Super Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
 
@@ -344,26 +344,30 @@ Use the SequalPrep Normalization Plate Kit
     
 3.  (Optional) Gel Purification
 
-    a.
+    a. Load 50-200ul of each pooled plate on a 1% agarose gel.  It will usually be necessary to 
+      tape several combs together to accomadate the volume.
+      
+    b. Run the gel for ~1hr at 100V, until there is sufficient separation 
+      between the amplicon and the indices.
+      
+    c. Briefly image the gel under UV light to locate and excise the band.
     
-    b.
-    
-    c.
-    
-    d.
+    b. Follow the manufactures protocol for extracting the DNA from the gel ([QIAquick Gel Extraction Kit](https://www.qiagen.com/us/resources/download.aspx?id=f4ba2d24-8218-452c-ad6f-1b6f43194425&lang=en)). 
+
+    c. Once the DNA is isolated, proceed to qPCR quantification.
     
 
-4.  Kapa Q-PCR Library Quantification
+4.  Kapa qPCR Library Quantification
 
-    a.  Before Q-PCR reaction setup, add 1 ml Primer Premix (10X) to the
-        5 ml bottle of KAPA SYBR® FAST Q-PCR Master Mix (2X) and mix by
+    a.  Before qPCR reaction setup, add 1 ml Primer Premix (10X) to the
+        5 ml bottle of KAPA SYBR® FAST qPCR Master Mix (2X) and mix by
         vortexing for 10 sec. Record the date of Primer Premix addition
-        on the KAPA SYBR® FAST Q-PCR Master Mix bottle.
+        on the KAPA SYBR® FAST qPCR Master Mix bottle.
 
     b.  Reaction can be either 10 ul or 20 ul. A 10 ul reaction volume
         is recommended.
 
-    c.  Prepare a 96 well Q-PCR plate compatible with the real time
+    c.  Prepare a 96 well qPCR plate compatible with the real time
         thermocycler. There are six standards. Each should be run in
         triplicate. Each pool at each dilution should be run in
         triplicate.
