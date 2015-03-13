@@ -61,7 +61,7 @@
     from leftover indices/primer-dimer, an additional gel purification of the pooled 
     plates is recommended.  This often improves the quality of the sequencing run.
 
-8.  Each pooled plate is quantified using a KAPA Biosystems [Q-PCR kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits) cat\# KK4824. 
+8.  Each pooled plate is quantified using a KAPA Biosystems [qPCR kit](http://www.kapabiosystems.com/products/name/kapa-library-quant-kits) cat\# KK4824. 
 
 9.  Plates are pooled to equal concentration into a single well (i.e. 1 well per run)
         
@@ -154,7 +154,7 @@
 
     -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
-    -   [Kapa Biosystems Q-PCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
+    -   [Kapa Biosystems qPCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
         
     -   [Accuprime Pfx Super Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
 
@@ -180,12 +180,23 @@
     c.  B701 – B712 with B501 – B508
     d.  B701 – B712 with A501 – A508
 
-Note: These primer plates can be stored at -20C and used for subsequent runs.
+Note: These primer plates can be stored at -20°C and used for subsequent runs.
 
 4.  Extract template DNA and array in 96 well format leaving two wells
     open. (One for a negative water control and another for the positive
     Mock Community control)
 
+5.  Using Illumina Experiment Manager, create a sample plate for each 96
+    well plate of template. Choose indexes that correspond to one of the
+    four index pair plates above. See Appendix A for instruction on
+    creating a custom assay in IEM.
+
+6.  Using Illumina Experiment Manager, create a sample sheet for the
+    run. Ensure that index choices are compatible with one another and
+    there is sufficient diversity in the index reads so as to activate
+    both light channels every cycle. Note: Primer plate A has
+    insufficient diversity to be run alone. If sequencing 96 or fewer
+    samples, choose plate B, C, or D.
 
 
 ***5.3) PCR***
@@ -213,18 +224,18 @@ automated pipetting system.
 
 Use the following program:
 
-> 95C 2:00\
+> 95°C 2:00\
 > --------30 cycles--------
 >
-> 95C 00:20\
-> 55C 00:15\
-> 72C 5:00\
+> 95°C 00:20\
+> 55°C 00:15\
+> 72°C 5:00\
 > ----------------------
 >
-> 72C 10:00\
-> 4C Hold
+> 72°C 10:00\
+> 4°C Hold
 
-***Gel Electrophoresis***
+***5.4) Gel Electrophoresis***
 
 1.  1 or 2 random rows of 12 should be selected from each PCR plate and run on
     a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)
@@ -236,7 +247,7 @@ Use the following program:
 4.  Photograph gel under UV. Check to be sure there is a band for every
     well.
 
-***Cleanup, Normalization, and Pooling***
+***5.6) Cleanup, Normalization, and Pooling***
 
 Use the SequalPrep Normalization Plate Kit
 
@@ -266,7 +277,7 @@ Use the SequalPrep Normalization Plate Kit
 
 9.  Freeze the remaining sample for later use.
 
-***Library QC & Quantification***
+***5.7) Library QC & Quantification***
 
 1.  Prepare the following dilutions of each pooled library in PCR grade
     H~2~O (or 10nM Tris-HCl + 0.05% Tween20):
@@ -326,26 +337,30 @@ Use the SequalPrep Normalization Plate Kit
     
 3.  (Optional) Gel Purification
 
-    a.
+    a. Load 50-200ul of each pooled plate on a 1% agarose gel.  It will usually be necessary to 
+      tape several combs together to accomadate the volume.
+      
+    b. Run the gel for ~1hr at 100V, until there is sufficient separation 
+      between the amplicon and the indices.
+      
+    c. Briefly image the gel under UV light to locate and excise the band.
     
-    b.
-    
-    c.
-    
-    d.
+    b. Follow the manufactures protocol for extracting the DNA from the gel ([QIAquick Gel Extraction Kit](https://www.qiagen.com/us/resources/download.aspx?id=f4ba2d24-8218-452c-ad6f-1b6f43194425&lang=en)). 
+
+    c. Once the DNA is isolated, proceed to qPCR quantification.
     
 
-4.  Kapa Q-PCR Library Quantification
+4.  Kapa qPCR Library Quantification
 
-    a.  Before Q-PCR reaction setup, add 1 ml Primer Premix (10X) to the
-        5 ml bottle of KAPA SYBR® FAST Q-PCR Master Mix (2X) and mix by
+    a.  Before qPCR reaction setup, add 1 ml Primer Premix (10X) to the
+        5 ml bottle of KAPA SYBR® FAST qPCR Master Mix (2X) and mix by
         vortexing for 10 sec. Record the date of Primer Premix addition
-        on the KAPA SYBR® FAST Q-PCR Master Mix bottle.
+        on the KAPA SYBR® FAST qPCR Master Mix bottle.
 
     b.  Reaction can be either 10 ul or 20 ul. A 10 ul reaction volume
         is recommended.
 
-    c.  Prepare a 96 well Q-PCR plate compatible with the real time
+    c.  Prepare a 96 well qPCR plate compatible with the real time
         thermocycler. There are six standards. Each should be run in
         triplicate. Each pool at each dilution should be run in
         triplicate.
@@ -360,13 +375,13 @@ Use the SequalPrep Normalization Plate Kit
 
     g.  Program the following cycle
 
-        i.  Initial Activation 95 °C 5 minutes
+        i.  Initial Activation 95°C 5 minutes
 
         ii. 35 cycles
 
-            1.  Denaturation 95 °C 30 seconds
+            1.  Denaturation 95°C 30 seconds
 
-            2.  Annealing 60 °C 45 seconds
+            2.  Annealing 60°C 45 seconds
 
             3.  If library fragment size exceeds 700bp, extend annealing
                 step to 90 seconds.
@@ -417,53 +432,29 @@ Use the SequalPrep Normalization Plate Kit
     well.  Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. 
     Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \>1nM library is ideal)
 
-***Sequencing***
+***5.8) Sequencing***
 
-1.  Remove a 500 cycle reagent cartridge from the -20 **°**C freezer.
+1.  Remove a 500 cycle reagent cartridge from the -20°C freezer.
     Place in room temperature water bath for one hour. Place HT1 buffer
-    tube in 4 **°**C fridge.
+    tube in 4°C fridge. While reagent cartridge is thawing, perform steps 2-6.
 
-2.  Copy sample sheet to sample sheet folder on MiSeq. Rename sample
-    sheet to match barcode of reagent cartridge.
+2.  Prepare fresh 0.2N NaOH. 
 
-3.  When the reagent cartridge has thawed, dry bottom with paper towel.
-    Invert the cartridge repeatedly to check each well is thawed. This
-    also serves to mix the reagents. Place in hood.
-
-4.  Thaw library, PhiX, and sequencing primers. Check to make sure HT1
-    is thawed.
-
-5.  Place 3 ul of the 100 uM Read 1 Sequencing Primer(s) into a clean
-    PCR tube. Repeat in separate tubes for the Index Primer(s) and Read
-    2 Sequencing Primer(s).
-
-6.  Using a 1000 ul pipette tip, break the foil over wells 12, 13, 14,
-    and 17.
-
-7.  Use an extra long 100 ul tip with the pipettor set on 75 ul to
-    transfer the 3 ul of Read 1 Sequencing Primer to the bottom of well
-    12 and pipette 10X to mix. Repeat this process spiking the Index
-    Primer into well 13 and the Read 2 Sequencing Primer into well 14.
-
-8.  Prepare a fresh dilution of 0.2N NaOH.
-
-9.  To a 1.5ml tube add 10 ul of library, and 10 ul of 0.2N NaOH. To a
+3.  To a 1.5ml tube, add 10 ul of library and 10 ul of 0.2N NaOH. To a
     separate tube add 2 ul PhiX, 3 ul PCR grade water, and 5 ul of 0.2N
-    NaOH. Vortex both tubes to mix and spin for 1 minute at 400rcf.
-    Note: NaOH concentration on the flow cell must remain under 0.001N.
-    Adjusting the concentration of the NaOH used to denature the DNA to
-    0.1N may be necessary if library concentration is 1nM or below.[^1]
+    NaOH. Pipette to mix. Note: NaOH concentration on the flow cell must 
+    remain under 0.001N. Adjusting the concentration of the NaOH used to 
+    denature the DNA to 0.1N may be necessary if library concentration is 1nM or below.[^1]
 
-10. Allow the tubes to incubate at room temperature for 5 minutes.
-    Immediately add 980 ul of HT1 to the library tube, and 990 ul HT1 to
-    the PhiX tube.
+4.  Allow the tubes to incubate at room temperature for 5 minutes.
+    Immediately add 980 ul of ice-cold HT1 to the library tube, 
+    and 990 ul HT1 to the PhiX tube. Note: the resulting 20pM PhiX can be
+    frozen and used for subequent runs.
 
-11. Use HT1 to dilute both the library and PhiX to 4pM for a v2 kit. Can
-    load up to 8pM for a v3 kit. For a 10% PhiX run, combine 900 ul of
-    4.0pM Library and 100 ul PhiX in a final tube. Vortex. Load 600 ul
-    of this solution into well 17 on the reagent cartridge. See example
-    below:
-
+5.  Use HT1 to further dilute both the library and PhiX to 4pM for a v2 kit. Can
+    load up to 8pM for a v3 kit. 
+    
+    See example below:
     a.  (1.45 nM library x 10 ul) + (0.2N NaOH x 10 ul) + 980 ul HT1 =
         14.5pM Lib, 0.002N NaOH
 
@@ -479,30 +470,54 @@ Use the SequalPrep Normalization Plate Kit
 
     f.  Solution loaded is 4.0pM overall with a 3.6pM Library
         concentration, 0.4pM PhiX concentration, and 0.000515N NaOH
+    
+6.  For a 10% PhiX run, combine 900 ul of 4.0pM Library and 100 ul PhiX 
+    in a final tube. Vortex.
+    
+7.  When the reagent cartridge has thawed, dry bottom with paper towel.
+    Invert the cartridge repeatedly to check each well is thawed. This
+    also serves to mix the reagents. Place in hood. 
 
-<!-- -->
+8.  Using a clean 1000 ul pipette tip, break the foil covering wells 12, 13, 14, and 17
+    of the reagent cartridge.
 
-13. Set reagent cartridge aside. Unbox flow cell and PR2 bottle.
+9.  Load 600 ul of the final Libary/PhiX solution into well 17 on the reagent cartridge. 
 
-14. Thoroughly rinse the flow cell with Milli-Q water. Carefully dry by
+10. Place 3 ul of the 100 uM Read 1 Sequencing Primer(s) into a clean
+    PCR tube. Repeat in separate tubes for the Index Primer(s) and Read
+    2 Sequencing Primer(s).
+
+11.  Use an extra long 100 ul tip and pipetter transfer the 3 ul of Read 1 Sequencing Primer 
+    to the bottom of well 12 and pipette to mix. Repeat this process spiking the Index
+    Primer into well 13 and the Read 2 Sequencing Primer into well 14.
+
+12. Set reagent cartridge aside. Unbox flow cell and PR2 bottle.
+
+13. Thoroughly rinse the flow cell with Milli-Q water. Carefully dry by
     blotting with lint free wipes (Kimwipes). Give special attention to
     the edges and points of intersection between the glass and plastic.
 
-15. Wet a new wipe with 100% alcohol and wipe the glass on both sides
+14. Wet a new wipe with 100% alcohol and wipe the glass on both sides
     avoiding the rubber intake ports.
 
-16. Visually inspect the flow cell to ensure there are no blemishes,
+15. Visually inspect the flow cell to ensure there are no blemishes,
     particles, or fibers on the glass.
 
-17. Follow on screen instructions and load the flow cell, reagent
+16. Transfer reagent cartridge, flow cell, PR2 bottle, and flash drive 
+    with the sample sheet to the MiSeq.
+
+17. Copy Sample Sheet from the flash drive to the "Sample Sheets" folder on the desktop of the MiSeq
+
+18. Follow on screen instructions to load the flow cell, reagent
     cartridge, and PR2 bottle. Empty and replace the waste bottle.
 
-18. Ensure the machine recognizes the correct sample sheet and the run
+19. Ensure the machine recognizes the correct sample sheet and the run
     parameters are correct.
 
-19. Wait for the MiSeq to perform its pre-run checks, and press start.
+20. Wait for the MiSeq to perform its pre-run checks, and press start.
 
-***Run Monitoring***
+
+***5.9) Run Monitoring***
 
 1.  The run should be monitored periodically using Illumina Sequence
     Analysis Viewer.
@@ -523,51 +538,29 @@ Use the SequalPrep Normalization Plate Kit
 
     g.  Final \>Q30 score of \>70%
 
-***Final Steps***
 
-1.  Perform post run wash.
+***5.10) Final Steps***
+
+1.  Perform a post run wash on the MiSeq.
 
 2.  Dispose of liquid waste in appropriate hazardous jug and reagent
     cartridge in hazardous bucket.
 
-3.  When MiSeq Reporter finishes, copy the fastq files from the analysis
+3.  When MiSeq Reporter finishes, copy the fastq files from the output
     folder to the run folder on the NAS drive.
 
-4.  Perform maintenance wash if required.
+4.  Perform maintenance or standby wash if required.
 
-5.  Confirm with investigator that data are of sufficient quality and
+5.  Check data to confirm they are of sufficient quality and
     quantity.
 
   ---------------------------------------------------------------
   **Appendix A: Adding An Assay To Illumina Experiment Manager**
   ---------------------------------------------------------------
 
-5.  Using Illumina Experiment Manager, create a sample plate for each 96
-    well plate of template. Choose indexes that correspond to one of the
-    four index pair plates above. See Appendix C for instruction on
-    creating a custom assay in IEM.
-
-6.  Using Illumina Experiment Manager, create a sample sheet for the
-    run. Ensure that index choices are compatible with one another and
-    there is sufficient diversity in the index reads so as to activate
-    both light channels every cycle. Note: Primer plate A has
-    insufficient diversity to be run alone. If sequencing 96 or fewer
-    samples, choose plate B, C, or D.
-
-7.  The MiSeq requires base diversity on every cycle. 16S is a low
-    diversity library. With MiSeq software v2.2, 16S libraries can be
-    loaded with 5% PhiX. Additionally, other high diversity samples such
-    as metagenomes can be run simultaneously. This requires manually
-    editing the sample sheet. Older software versions required
-    “hardcoding” the matrix and phasing/pre-phasing values. See Appendix
-    B.
-
-
-
-
 Introduction
 
-Illumina Experiment Manager is used to generate sample plates and
+Illumina Experiment Manager (IEM) is used to generate sample plates and
 sheets. A new assay must be added to the system to efficiently prepare
 sample sheets for 16S sequencing. Not only does this eliminate the need
 to manually assemble a sample sheet for 16S runs, but allows the user to
@@ -611,11 +604,51 @@ Procedure
 
 11. Add a line at to the bottom with the text “Schloss”
 
-  -----------------------------
-  **Appendix B: Primer design**
-  -----------------------------
+  -----------------------------------------------------------------------------------------
+  **Appendix B: Creating Sample Plates and a Sample Sheet in IEM**
+  -----------------------------------------------------------------------------------------
 
+***Part1: Creating Sample Plates***
 
+1. Open IEM and click Create Sample Plate.  
+2. Select "Schloss" from the Sample Perp Kit Selection menu. Click Next.  
+3. Enter the plate name (e.g. projectName_plate1). Click Next.  
+4. Click the Plate tab for a 96-well plate format.  
+5. Copy and paste sample names from an excel file, csv, etc., or enter the names manually.  
+6. Select the appropriate I7 and I5 indices in the upper and left pull-down menus using the following scheme.  
+    a.  Plate 1: A701 – A712 with A501 – A508
+    b.  Plate 2: A701 – A712 with B501 – B508
+    c.  Plate 3: B701 – B712 with B501 – B508
+    d.  Plate 4: B701 – B712 with A501 – A508  
+Note: You can select the first two indices, click and drag to highlight the remaing index spots, then click "fill right" or "fill down".  
+7. Click Finish, then Save.  
+8. Repeat steps 1-7 for all sample plates.  
+
+***Part2: Creating a Sample Sheet***
+
+1. From the IEM main menu, select Create Sample Sheet.  
+2. On the Instrument Selction page, select the MiSeq and click Next.  
+3. On the MiSeq Application Selection page, click Other, Fastq Only, Next.  
+4. Enter the barcode for the MiSeq Reagent Kit being used for the run.  
+5. Select "Schloss" as the Sample Prep Kit.  
+6. Enter the Experiment Name, Investigator Name, and Description.  
+7. Change the number of cycles to 251 for both read 1 and 2. Click Next.  
+Note: You should not need to check or uncheck any boxes on the right.  They should remain unchanged after selecting
+the Schloss Sample Prep Kit.  The Custom Primer boxes and the Reverse Compliment should be unchecked. The
+Use Adapter Trimming box should be checked.  
+8. On the Sample Selection page, uncheck the Maximize box in the upper right corner.  
+9. Click Select Plate in upper left, and select the appropriate sample plate file for plate 1.  
+10. Click Select All at the bottom, then Add Selected Samples.  
+11. Check the Sample Sheet Status on the right.  
+Note: For plate 1, IEM may give a warning of low diversity. This will go away when more plates are added.  
+As long as the status is not "Invalid", you may proceed.  
+12. Repeat steps 9-11 for the remaining sample plates.  
+13. Click Finish, then Save.  
+Note: In most cases the Sample Sheet should be saved to a flash drive to be transfered to the MiSeq.  
+
+  -----------------------------
+  **Appendix C: Primer design**
+  -----------------------------
 
 Overall design considerations
 
