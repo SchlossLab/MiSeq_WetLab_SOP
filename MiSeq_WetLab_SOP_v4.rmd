@@ -44,7 +44,7 @@ layout: post
 ***1.2) 16S Prep Workflow***
 
     This section is an overview of the steps involved in library preparation.  
-    For a more detailed desctiption of the mehods, see Section 5 below.
+    For a more detailed desctiption of the methods, see Section 5 below.
 
 1.  Extracted DNA should be arrayed in 96 well plate format, preferably with
     two wells on each plate open for controls. 
