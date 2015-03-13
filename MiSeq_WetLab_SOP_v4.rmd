@@ -612,18 +612,30 @@ Procedure
 11. Add a line at to the bottom with the text “Schloss”
 
   -----------------------------------------------------------------------------------------
-  **Appendix B: Creating Sample Plates and a Sample Sheets in Illumina Experiment Manager**
+  **Appendix B: Creating Sample Plates and a Sample Sheet in Illumina Experiment Manager (IEM)**
   -----------------------------------------------------------------------------------------
+***Part1: Creating Sample Plates***
+1. Open IEM and click "Create Sample Plate".  
+2. Select "Schloss" from the Sample Perp Kit Selection menu. Click Next.  
+3. Enter the plate name (e.g. projectName_plate1). Click Next.  
+4. Click the "Plate" tab for a 96-well plate format.
+5. Copy and paste sample names from an excel file, csv, etc., or enter the names manually.
+6. Select the appropriate I7 and I5 indices in the upper and left pull-down menus using the following scheme.
+    a.  Plate 1: A701 – A712 with A501 – A508
+    b.  Plate 2: A701 – A712 with B501 – B508
+    c.  Plate 3: B701 – B712 with B501 – B508
+    d.  Plate 4: B701 – B712 with A501 – A508
+Note: You can select the first two indices, click and drag to highlight the remaing index spots, then click "fill right" or "fill down".
+7. Click Finish, then Save.
+8. Repeat steps 1-7 for all sample plates.
 
-
-
-
-
-
+***Part2: Creating a Sample Sheet***
+1. From the IEM main menu, select "Create Sample Sheet".
+2. 
 
 
   -----------------------------
-  **Appendix c: Primer design**
+  **Appendix C: Primer design**
   -----------------------------
 
 Overall design considerations
