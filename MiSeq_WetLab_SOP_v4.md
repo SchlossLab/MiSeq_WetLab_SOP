@@ -641,8 +641,7 @@ Note: You can select the first two indices, click and drag to highlight the rema
 6. Enter the Experiment Name, Investigator Name, and Description.  
 7. Change the number of cycles to 251 for both read 1 and 2. Click Next.  
 Note: You should not need to check or uncheck any boxes on the right.  They should remain unchanged after selecting
-the Schloss Sample Prep Kit.  The Custom Primer boxes and the Reverse Compliment should be unchecked. The
-Use Adapter Trimming box should be checked.  
+the Schloss Sample Prep Kit.  
 8. On the Sample Selection page, uncheck the Maximize box in the upper right corner.  
 9. Click Select Plate in upper left, and select the appropriate sample plate file for plate 1.  
 10. Click Select All at the bottom, then Add Selected Samples.  
