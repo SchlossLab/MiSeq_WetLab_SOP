@@ -563,7 +563,7 @@ Use the SequalPrep Normalization Plate Kit
 ###Appendix A: Adding An Assay To Illumina Experiment Manager
 
 
-Note: As an alternative to the procedure below, you can simply save the 
+Note: You can skip steps 2-9 by simply saving the 
 [Schloss.txt](https://github.com/SchlossLab/MiSeq_WetLab_SOP/blob/master/Schloss.txt) 
 file to the "C:\\program files\\Illumina\\Illumina Experiment Manager\\Sample Prep Kits" directory.
 
