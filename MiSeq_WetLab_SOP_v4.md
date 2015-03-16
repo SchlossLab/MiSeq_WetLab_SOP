@@ -1,12 +1,12 @@
 # MiSeq Wet Lab SOP
 
 
-**Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing |  
-**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior |  
-**Original Date:**  | 25-March-2013 |  
-**Version:**        | 4.0 |  
-**Last Updated:**   | 9-March-2015 |  
-**Updated By:**     |  Niel Baxter |  
+**Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing  
+**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior  
+**Original Date:**  | 25-March-2013  
+**Version:**        | 4.0  
+**Last Updated:**   | 9-March-2015  
+**Updated By:**     |  Niel Baxter  
 
 
 ------------------------------------
