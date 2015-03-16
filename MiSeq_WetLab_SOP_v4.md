@@ -614,9 +614,7 @@ Procedure
 
 11. Add a line at to the bottom with the text “Schloss”
 
-  -----------------------------------------------------------------------------------------
-  **Appendix B: Creating Sample Plates and a Sample Sheet in IEM**
-  -----------------------------------------------------------------------------------------
+###Appendix B: Creating Sample Plates and a Sample Sheet in IEM
 
 ***Part1: Creating Sample Plates***
 
@@ -656,9 +654,7 @@ As long as the status is not "Invalid", you may proceed.
 13. Click Finish, then Save.  
 Note: In most cases the Sample Sheet should be saved to a flash drive to be transfered to the MiSeq.  
 
-  -----------------------------
-  **Appendix C: Primer design**
-  -----------------------------
+###Appendix C: Primer design
 
 Overall design considerations
 
