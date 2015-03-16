@@ -3,12 +3,13 @@
 
 
 |-------:|:--------|
-**Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing |
-**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior |
-**Original Date:**  | 25-March-2013 |
-**Version:**        | 4.0 |
-**Last Updated:**   | 9-March-2015 |
-**Updated By:**     |  Niel Baxter |
+**Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing |  
+**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior |  
+**Original Date:**  | 25-March-2013 |  
+**Version:**        | 4.0 |  
+**Last Updated:**   | 9-March-2015 |  
+**Updated By:**     |  Niel Baxter |  
+
 
 ------------------------------------
 **1.0) Introduction and Workflow**
@@ -16,28 +17,36 @@
 
 ***1.1) Introduction***
 
--   The Purpose of this protocol is to define the steps and estimated costs for 
+-   The Purpose of this protocol is to define the steps for 
     the preparation and sequencing of 16S rRNA gene sequence libraries 
-    using the Illumina MiSeq sequencing platform.
+    using the Illumina MiSeq sequencing platform, as described in the paper 
+    [Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform](http://www.ncbi.nlm.nih.gov/pubmed/23793624) by Kozich et al.
 
--   The Illumina MiSeq Personal Sequencer can produce 2 x 250 paired-end
-    reads and up to 8.5 Gb of data in a single run. Dual indexing of
+-   The Illumina MiSeq Personal Sequencer can produce 2 x 250bp (or 2 x 300bp with v3 chemistry) 
+    paired-end reads and up to 8.5 Gb of data in a single run. Dual indexing of
     library samples allows up to 384 samples to be run simultaneously.
     The instrument is capable of producing in excess of 24 million
-    reads, however, for low diversity runs about 12 million reads can be
+    reads. However for low diversity runs about 12 million reads can be
     expected. A wide range of applications is possible including 16S
     analysis, metagenomics, genome sequencing, transcriptomics, and RNA
-    sequencing.
+    sequencing. 
+    
+-   Our lab typically sequences the V4 region of the 16S rRNA gene. 
+    Its short length (~250bp) allows for fully overlapping forward and reverse reads,
+    which, in combination with our [curaton pipeline](http://www.mothur.org/wiki/MiSeq_SOP),
+    results in the lowest error rates. We also prefer to use the older v2 MiSeq cartridges, as the
+    newer v3 chemistry consistently results in a higher error rates in our hands.
 
 -   There are several steps in preparing samples for sequencing on the
     MiSeq. Broadly, these include library generation and indexing,
     quality control, normalization and pooling, quantification,
-    sequencing, run quality assessment, and data export.
+    sequencing, run quality assessment, and data export. An overview of 
+    each step and more detailed protocols are below.
 
 ***1.2) 16S Prep Workflow***
 
     This section is an overview of the steps involved in library preparation.  
-    For a more detailed desctiption of the mehods, see Section 5 below.
+    For a more detailed desctiption of the methods, see Section 5 below.
 
 1.  Extracted DNA should be arrayed in 96 well plate format, preferably with
     two wells on each plate open for controls. 
@@ -154,7 +163,7 @@
 
     -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
-    -   [Kapa Biosystems qPCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
+    -   Kapa Biosystems qPCR Library Quantification Kit Illumina
         
     -   [Accuprime Pfx Super Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
 
@@ -242,7 +251,7 @@ Use the following program:
 
 2.  Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.
 
-3.  Run at 100v for 30 minutes alongside a standard ladder.
+3.  Run at 100v for 30 minutes alongside a 1kb+ ladder.
 
 4.  Photograph gel under UV. Check to be sure there is a band for every
     well.

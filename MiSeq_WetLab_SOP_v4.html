@@ -92,13 +92,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </table>
 <p><strong><em>1.1) Introduction</em></strong></p>
 <ul>
-<li><p>The Purpose of this protocol is to define the steps and estimated costs for the preparation and sequencing of 16S rRNA gene sequence libraries using the Illumina MiSeq sequencing platform.</p></li>
-<li><p>The Illumina MiSeq Personal Sequencer can produce 2 x 250 paired-end reads and up to 8.5 Gb of data in a single run. Dual indexing of library samples allows up to 384 samples to be run simultaneously. The instrument is capable of producing in excess of 24 million reads, however, for low diversity runs about 12 million reads can be expected. A wide range of applications is possible including 16S analysis, metagenomics, genome sequencing, transcriptomics, and RNA sequencing.</p></li>
-<li><p>There are several steps in preparing samples for sequencing on the MiSeq. Broadly, these include library generation and indexing, quality control, normalization and pooling, quantification, sequencing, run quality assessment, and data export.</p></li>
+<li><p>The Purpose of this protocol is to define the steps for the preparation and sequencing of 16S rRNA gene sequence libraries using the Illumina MiSeq sequencing platform, as described in the paper <a href="http://www.ncbi.nlm.nih.gov/pubmed/23793624">Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform</a> by Kozich et al.</p></li>
+<li><p>The Illumina MiSeq Personal Sequencer can produce 2 x 250bp (or 2 x 300bp with v3 chemistry) paired-end reads and up to 8.5 Gb of data in a single run. Dual indexing of library samples allows up to 384 samples to be run simultaneously. The instrument is capable of producing in excess of 24 million reads. However for low diversity runs about 12 million reads can be expected. A wide range of applications is possible including 16S analysis, metagenomics, genome sequencing, transcriptomics, and RNA sequencing.</p></li>
+<li><p>Our lab typically sequences the V4 region of the 16S rRNA gene. Its short length (~250bp) allows for fully overlapping forward and reverse reads, which, in combination with our <a href="http://www.mothur.org/wiki/MiSeq_SOP">curaton pipeline</a>, results in the lowest error rates. We also prefer to use the older v2 MiSeq cartridges, as the newer v3 chemistry consistently results in a higher error rates in our hands.</p></li>
+<li><p>There are several steps in preparing samples for sequencing on the MiSeq. Broadly, these include library generation and indexing, quality control, normalization and pooling, quantification, sequencing, run quality assessment, and data export. An overview of each step and more detailed protocols are below.</p></li>
 </ul>
 <p><strong><em>1.2) 16S Prep Workflow</em></strong></p>
 <pre><code>This section is an overview of the steps involved in library preparation.  
-For a more detailed desctiption of the mehods, see Section 5 below.</code></pre>
+For a more detailed desctiption of the methods, see Section 5 below.</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Extracted DNA should be arrayed in 96 well plate format, preferably with two wells on each plate open for controls.</p></li>
 <li><p>Samples are PCR amplified with Schloss lab indices. Each plate should contain a negative control (water) and a positive control (mock community)</p></li>
@@ -279,7 +280,7 @@ For a more detailed desctiption of the mehods, see Section 5 below.</code></pre>
 <ul>
 <li><p><a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf">MiSeq User Guide</a></p></li>
 <li><p><a href="http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf">Preparing DNA Libraries for Sequencing on the MiSeq</a></p></li>
-<li><p><a href="http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf">Kapa Biosystems qPCR Library Quantification Kit Illumina</a></p></li>
+<li><p>Kapa Biosystems qPCR Library Quantification Kit Illumina</p></li>
 <li><p><a href="http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf">Accuprime Pfx Super Mix</a></p></li>
 <li><p><a href="http://tools.lifetechnologies.com/content/sfs/manuals/sequalprep_platekit_man.pdf">SequalPrep Normalization Plate (96) Kit</a></p></li>
 <li><p><a href="http://www.chem.agilent.com/library/usermanuals/Public/G2938-90321_SensitivityDNA_KG_EN.pdf">Agilent High Sensitivity DNA Kit Guide</a></p></li>
@@ -324,7 +325,7 @@ For a more detailed desctiption of the mehods, see Section 5 below.</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>1 or 2 random rows of 12 should be selected from each PCR plate and run on a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)</p></li>
 <li><p>Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.</p></li>
-<li><p>Run at 100v for 30 minutes alongside a standard ladder.</p></li>
+<li><p>Run at 100v for 30 minutes alongside a 1kb+ ladder.</p></li>
 <li><p>Photograph gel under UV. Check to be sure there is a band for every well.</p></li>
 </ol>
 <p><strong><em>5.6) Cleanup, Normalization, and Pooling</em></strong></p>
