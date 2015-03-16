@@ -563,11 +563,15 @@ Use the SequalPrep Normalization Plate Kit
 5.  Check data to confirm they are of sufficient quality and
     quantity.
 
-  ---------------------------------------------------------------
-  **Appendix A: Adding An Assay To Illumina Experiment Manager**
-  ---------------------------------------------------------------
 
-Introduction
+###Appendix A: Adding An Assay To Illumina Experiment Manager
+
+
+Note: As an alternative to the procedure below, you can simply save the 
+[Schloss.txt](https://github.com/SchlossLab/MiSeq_WetLab_SOP/blob/master/Schloss.txt) 
+file to the "C:\\program files\\Illumina\\Illumina Experiment Manager\\Sample Prep Kits" directory.
+
+**Introduction**
 
 Illumina Experiment Manager (IEM) is used to generate sample plates and
 sheets. A new assay must be added to the system to efficiently prepare
