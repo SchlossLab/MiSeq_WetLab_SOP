@@ -231,14 +231,14 @@ automated pipetting system.
 
 Use the following program:
 
-> 95°C 2:00\
+> 95°C 2:00   
 > --------30 cycles--------  
-> 95°C 00:20\
-> 55°C 00:15\
-> 72°C 5:00\
-> ----------------------  
-> 72°C 10:00\
-> 4°C Hold
+> 95°C 00:20  
+> 55°C 00:15  
+> 72°C 5:00  
+> \----------------------  
+> 72°C 10:00  
+> 4°C Hold  
 
 ***5.4) Gel Electrophoresis***
 
