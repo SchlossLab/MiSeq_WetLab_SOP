@@ -27,7 +27,7 @@ layout: post
 -   The Purpose of this protocol is to define the steps for 
     the preparation and sequencing of 16S rRNA gene sequence libraries 
     using the Illumina MiSeq sequencing platform, as described in the paper 
-    [Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform.](http://www.ncbi.nlm.nih.gov/pubmed/23793624)
+    [Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform](http://www.ncbi.nlm.nih.gov/pubmed/23793624) by Kozich et al.
 
 -   The Illumina MiSeq Personal Sequencer can produce 2 x 250bp (or 2 x 300bp with v3 chemistry) 
     paired-end reads and up to 8.5 Gb of data in a single run. Dual indexing of
@@ -41,8 +41,8 @@ layout: post
 -   Our lab typically sequences the V4 region of the 16S rRNA gene. 
     Its short length (~250bp) allows for fully overlapping forward and reverse reads,
     which, in combination with our [curaton pipeline](http://www.mothur.org/wiki/MiSeq_SOP),
-    results in the lowest error rate. We also prefer to use the older v2 MiSeq cartridges, as the
-    newer v3 chemistry consistently results in a higher error rate in our hands.
+    results in the lowest error rates. We also prefer to use the older v2 MiSeq cartridges, as the
+    newer v3 chemistry consistently results in a higher error rates in our hands.
 
 -   There are several steps in preparing samples for sequencing on the
     MiSeq. Broadly, these include library generation and indexing,
@@ -170,7 +170,7 @@ layout: post
 
     -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
-    -   [Kapa Biosystems qPCR Library Quantification Kit Illumina](http://www.kapabiosystems.com/public/pdfs/kapa-library-quant-kits/KAPA_Library_Quantification_Illumina_TDS.pdf)
+    -   Kapa Biosystems qPCR Library Quantification Kit Illumina
         
     -   [Accuprime Pfx Super Mix](http://tools.invitrogen.com/content/sfs/manuals/accuprimepfxsupermix_man.pdf)
 
