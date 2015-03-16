@@ -1,8 +1,6 @@
 # MiSeq Wet Lab SOP
 
 
-
-|-------:|:--------|
 **Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing |  
 **Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior |  
 **Original Date:**  | 25-March-2013 |  
@@ -104,9 +102,9 @@
 
 7.  A post run wash is performed, followed by a standby wash if the machine will be idle for a week or more.
 
-  ------------------------------------
-  **2.0) Safety and Waste Disposal**
-  ------------------------------------
+------------------------------------
+**2.0) Safety and Waste Disposal**
+------------------------------------
 
 -   The Schloss Lab Chemical Hygiene Plan should be followed at all
     times.
@@ -120,9 +118,9 @@
     formamide content.
     
 
-  ----------------------
-  **3.0) Consumables**
-  ----------------------
+----------------------
+**3.0) Consumables**
+----------------------
 
   Reagent/Kit                                             Catalog \#    Price
   ------------------------------------------------------- ------------- -----------
@@ -141,18 +139,18 @@
   Fisher 1N NaOH 1L                                       SS266-1       \$46.32
   TWIN.TEC 96 Well Plate Skirted Blue                     E951020460    \$99.23
 
-  --------------------
-  **4.0) Run Costs**
-  --------------------
+--------------------
+**4.0) Run Costs**
+--------------------
 
   For 384 sample run  PCR and Indexing  Cleanup & Normalization Library QC  Sequencing  Totals
   ------------------  ----------------  ----------------------- ----------  ----------  ------
   16S Reagents         \$588              \$265                 \$138        \$941      \$1932
   16S Man hours        4                  3                      4            4            15                                   
 
-  --------------------
-  **5.0) Detailed Method(s)**
-  --------------------
+--------------------
+**5.0) Detailed Method(s)**
+--------------------
 
 ***5.1) Published Protocols***
 
@@ -240,7 +238,6 @@ Use the following program:
 > 55°C 00:15\
 > 72°C 5:00\
 > ----------------------
->
 > 72°C 10:00\
 > 4°C Hold
 
