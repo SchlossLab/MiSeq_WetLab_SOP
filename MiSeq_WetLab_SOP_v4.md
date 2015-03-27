@@ -122,31 +122,31 @@
 **3.0) Consumables**
 ----------------------
 
-  Reagent/Kit                                             Catalog \#    Price
-  ------------------------------------------------------- ------------- -----------
-  MiSeq® Reagent Kit v2 (500 cycle)                       MS-102-2003   \$910.80
-  PhiX Control Kit v3                                     FC-110-3001   \$132.00
-  16s Index Primers (40 total)                            IDT           \$1180.00
-  16s Sequencing Primers (Read 1, Index, Read 2)          IDT           \$41.71
-  AccuPrime™ Pfx SuperMix (200rxns)                       12344-040     \$331.28
-  Library Quantification Kit - Illumina/Universal         KK4824        \$575.00
-  SequalPrep™ Normalization Plate (96) Kit                A10510-01     \$453.60
-  (optional) Agilent High Sensitivity DNA Kit             5067-4626     \$434.70
-  (optional) QIAquick Gel Extraction Kit (50 rxns)        28704         \$111.00
-  epT.I.P.S. Motion 1-50 uL Reloads 24 racks of 96 tips   30014421      \$190.00
-  Tip One Refill Wafers 200uL elongated graduated         NC9549602     \$39.24
-  Tip One Refill Wafers 1000uL graduated                  1111-2721     \$25.25
-  Fisher 1N NaOH 1L                                       SS266-1       \$46.32
-  TWIN.TEC 96 Well Plate Skirted Blue                     E951020460    \$99.23
+  Reagent/Kit                                       |      Catalog \#  |  Price
+  -------------------------------------------------------|-------------|-----------
+  MiSeq® Reagent Kit v2 (500 cycle)                    |   MS-102-2003  | $910.80
+  PhiX Control Kit v3                                   |  FC-110-3001  | $132.00
+  16s Index Primers (40 total)                        |    IDT          |$1180.00
+  16s Sequencing Primers (Read 1, Index, Read 2)      |    IDT           | $41.71
+  AccuPrime™ Pfx SuperMix (200rxns)                   |    12344-040     | $331.28
+  Library Quantification Kit - Illumina/Universal      |   KK4824        | $575.00
+  SequalPrep™ Normalization Plate (96) Kit             |   A10510-01     | $453.60
+  (optional) Agilent High Sensitivity DNA Kit           |  5067-4626     | $434.70
+  (optional) QIAquick Gel Extraction Kit (50 rxns)       | 28704         | $111.00
+  epT.I.P.S. Motion 1-50 uL Reloads 24 racks of 96 tips |  30014421      | $190.00
+  Tip One Refill Wafers 200uL elongated graduated       |  NC9549602     | $39.24
+  Tip One Refill Wafers 1000uL graduated               |   1111-2721     | $25.25
+  Fisher 1N NaOH 1L                                    |   SS266-1       | $46.32
+  TWIN.TEC 96 Well Plate Skirted Blue                  |   E951020460    | $99.23
 
 --------------------
 **4.0) Run Costs**
 --------------------
 
-  For 384 sample run  PCR and Indexing  Cleanup & Normalization Library QC  Sequencing  Totals
-  ------------------  ----------------  ----------------------- ----------  ----------  ------
-  16S Reagents         \$588              \$265                 \$138        \$941      \$1932
-  16S Man hours        4                  3                      4            4            15                                   
+  For 384 sample run | PCR and Indexing | Cleanup & Normalization | Library QC | Sequencing | Totals
+  ----------------- | --------------- | ----------------------| --------- | ---------- | ------
+  16S Reagents     |    $588          |    $265          |       $138   |     $941   |   $1932
+  16S Man hours    |   4           |       3             |         4      |      4       |     15                                   
 
 --------------------
 **5.0) Detailed Method(s)**
