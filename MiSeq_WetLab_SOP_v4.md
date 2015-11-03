@@ -157,9 +157,9 @@
 -   The following methods and references are used in the workflows
     above.
 
-    -   [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf)
+    -   [MiSeq System Guide](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/miseq-system-guide-15027617-01.pdf)
 
-    -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
+    -   [Preparing DNA Libraries for Sequencing on the MiSeq](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
     -   Kapa Biosystems qPCR Library Quantification Kit Illumina
         
