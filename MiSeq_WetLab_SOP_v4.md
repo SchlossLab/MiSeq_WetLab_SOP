@@ -84,10 +84,10 @@
     as the set of run parameters and indexing scheme used by the MiSeq for the run. 
     The sample sheet is then transferred to the MiSeq via flash drive.
 
-2.  The reagent cartridge is thawed in a water bath per the [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf).
+2.  The reagent cartridge is thawed in a water bath per the [MiSeq System Guide](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/miseq-system-guide-15027617-01.pdf).
 
 3.  Unless otherwise specified, dilution and loading will follow the
-    steps outlined in the document: [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)  
+    steps outlined in the document: [Preparing DNA Libraries for Sequencing on the MiSeq](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)  
       a. Pooled library and PhiX control are denatured and diluted.  
       b. Diluted library and PhiX are pooled (5-10% PhiX, 90-95% Library).  
       c. Sequencing pimers and library/PhiX are loaded into the reagent cartridge.  
@@ -157,9 +157,9 @@
 -   The following methods and references are used in the workflows
     above.
 
-    -   [MiSeq User Guide](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/miseq-system-user-guide-15027617-l.pdf)
+    -   [MiSeq System Guide](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/miseq-system-guide-15027617-01.pdf)
 
-    -   [Preparing DNA Libraries for Sequencing on the MiSeq](http://supportres.illumina.com/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
+    -   [Preparing DNA Libraries for Sequencing on the MiSeq](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)
 
     -   Kapa Biosystems qPCR Library Quantification Kit Illumina
         
