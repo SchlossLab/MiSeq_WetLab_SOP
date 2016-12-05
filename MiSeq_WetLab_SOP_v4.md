@@ -2,11 +2,11 @@
 
 
 **Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing  
-**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, & Matt Jenior  
+**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, & Charles Koumpouras  
 **Original Date:**  | 25-March-2013  
-**Version:**        | 4.0  
-**Last Updated:**   | 9-March-2015  
-**Updated By:**     |  Niel Baxter  
+**Version:**        | 5.0  
+**Last Updated:**   | 2-December-2016  
+**Updated By:**     | Charles Koumpouras  
 
 
 ------------------------------------
@@ -89,9 +89,9 @@
 3.  Unless otherwise specified, dilution and loading will follow the
     steps outlined in the document: [Preparing DNA Libraries for Sequencing on the MiSeq](https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/miseq/preparing-libraries-for-sequencing-on-miseq-15039740-d.pdf)  
       a. Pooled library and PhiX control are denatured and diluted.  
-      b. Diluted library and PhiX are pooled (5-10% PhiX, 90-95% Library).  
-      c. Sequencing pimers and library/PhiX are loaded into the reagent cartridge.  
-      d. MiSeq flow cell is washed  
+      b. Diluted library and PhiX are pooled (10-15% PhiX, 85-90% Library).  
+      c. Sequencing primers and library/PhiX are loaded into the reagent cartridge.  
+      d. MiSeq flow cell is washed.  
 
 4.  The sample sheet, flow cell, reagent cartridge, PR2 bottle, and an empty waste bottle 
     are loaded onto the MiSeq, and the run is initiated. A 500 cycle run takes approx. 44 hours.
@@ -101,7 +101,14 @@
 6.  Upon completions of the run, fastq files are transfered to the Schloss Lab NAS drive.
 
 7.  A post run wash is performed, followed by a standby wash if the machine will be idle for a week or more.
-
+        a. Between sequencing runs we recommened a bleach wash which is part of the post run wash.
+            - 0.5% Tween20 in reservoir bottle per usual.
+            - 6 mL of 0.5% Tween20 to each cartridge well except 17.
+            - Mix 870uL of ultrapure H2O AND 30uL of 6% Bleach to a 1.5 mL tube.
+	            - Note: This is to be made fresh for each wash.
+            - Mix 50uL of the bleach/water solution above and 950uL of ultrapure H2O in the MiSeq wash tube.
+            - Place the MiSeq wash tube in cartridge well 17. Load the cartridge into the MiSeq.   
+            - Start a post run wash on the MiSeq with “template line wash” selected.
 ------------------------------------
 **2.0) Safety and Waste Disposal**
 ------------------------------------
@@ -138,6 +145,7 @@
   Tip One Refill Wafers 1000uL graduated               |   1111-2721     | $25.25
   Fisher 1N NaOH 1L                                    |   SS266-1       | $46.32
   TWIN.TEC 96 Well Plate Skirted Blue                  |   E951020460    | $99.23
+  MiSeq Disposable Wash Tubes                          |   15054695      | ~$5.00
 
 --------------------
 **4.0) Run Costs**
@@ -145,7 +153,7 @@
 
   For 384 sample run | PCR and Indexing | Cleanup & Normalization | Library QC | Sequencing | Totals
   ----------------- | --------------- | ----------------------| --------- | ---------- | ------
-  16S Reagents     |    $588          |    $265          |       $138   |     $941   |   $1932
+  16S Reagents     |    $588          |    $265          |       $138   |     $946   |   $1937
   16S Man hours    |   4           |       3             |         4      |      4       |     15                                   
 
 --------------------
@@ -345,7 +353,7 @@ Use the SequalPrep Normalization Plate Kit
     a. Load 50-200ul of each pooled plate on a 1% agarose gel.  It will usually be necessary to 
       tape several combs together to accomadate the volume.
       
-    b. Run the gel for ~1hr at 100V, until there is sufficient separation 
+    b. Run the gel for ~1.5hr at 80V, until there is sufficient separation 
       between the amplicon and the indices.
       
     c. Briefly image the gel under UV light to locate and excise the band.
@@ -476,7 +484,7 @@ Use the SequalPrep Normalization Plate Kit
     f.  Solution loaded is 4.0pM overall with a 3.6pM Library
         concentration, 0.4pM PhiX concentration, and 0.000515N NaOH
     
-6.  For a 10% PhiX run, combine 900 ul of 4.0pM Library and 100 ul PhiX 
+6.  For a 15% PhiX run, combine 850 ul of 4.0pM Library and 150 ul PhiX 
     in a final tube. Vortex.
     
 7.  When the reagent cartridge has thawed, dry bottom with paper towel.
@@ -511,7 +519,7 @@ Use the SequalPrep Normalization Plate Kit
 16. Transfer reagent cartridge, flow cell, PR2 bottle, and flash drive 
     with the sample sheet to the MiSeq.
 
-17. Copy Sample Sheet from the flash drive to the "Sample Sheets" folder on the desktop of the MiSeq
+17. Copy Sample Sheet from the flash drive to the "Sample Sheets" folder on the desktop of the MiSeq.
 
 18. Follow on screen instructions to load the flow cell, reagent
     cartridge, and PR2 bottle. Empty and replace the waste bottle.
@@ -535,7 +543,7 @@ Use the SequalPrep Normalization Plate Kit
 
     c.  \>85% clusters passing filter
 
-    d.  10% aligned (amount of PhiX)
+    d.  15% aligned (amount of PhiX)
 
     e.  No spikes in corrected intensity plot
 
@@ -546,7 +554,7 @@ Use the SequalPrep Normalization Plate Kit
 
 ***5.10) Final Steps***
 
-1.  Perform a post run wash on the MiSeq.
+1.  Perform a post run wash on the MiSeq. We recommened the bleach wash.
 
 2.  Dispose of liquid waste in appropriate hazardous jug and reagent
     cartridge in hazardous bucket.
