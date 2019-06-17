@@ -47,7 +47,7 @@
     For a more detailed desctiption of the methods, see Section 5 below.
 
 1.  Extracted DNA should be arrayed in 96 well plate format, preferably with
-    two wells on each plate open for controls. 
+    two wells on each plate open for controls. We use the Qiagen DNeasy PowerSoil HTP 96 Kit (Cat# 12955-4) for all extractions.
 
 2.  Samples are PCR amplified with Schloss lab indices. Each plate should contain a negative control
     (water) and a positive control (mock community)
