@@ -135,12 +135,12 @@
   PhiX Control Kit v3                                   |  FC-110-3001  | $134.40
   16s Index Primers (40 total)                        |    IDT          |$1180.00
   16s Sequencing Primers (Read 1, Index, Read 2)      |    IDT           | $33.25
-  AccuPrime™ Pfx SuperMix (200rxns)                   |    12344-040     | $462.60
+  AccuPrime™ Pfx SuperMix 	                   |    12344-040     | $462.60
   KAPA Lib. Quantification Kit - Illumina/Universal      |   KK4824        | $751.98
   SequalPrep™ Normalization Plate (96) Kit             |   A10510-01     | $1494.00
   (optional) Agilent High Sensitivity DNA Kit           |  5067-4626     | $434.70
   epT.I.P.S. Motion 50 uL Filter Reloads 24 racks |  30014430      | $391.00
-   epT.I.P.S. Motion 1000 uL Filter Reloads 24 racks |  30014510      | $391.00
+  epT.I.P.S. Motion 1000 uL Filter Reloads 24 racks |  30014510      | $391.00
   Tip One Refill Wafers 200uL elongated graduated       |  NC9549602     | $39.24
   Tip One Refill Wafers 1000uL graduated               |   1111-2721     | $25.25
   Fisher 1N NaOH 1L                                    |   SS266-1       | $27.61
@@ -153,7 +153,7 @@
 
   For 384 sample run | PCR and Indexing | Cleanup & Normalization | Library QC | Sequencing | Totals
   ----------------- | --------------- | ----------------------| --------- | ---------- | ------
-  16S Reagents     |    $588          |    $265          |       $138   |     $946   |   $1937
+  16S Reagents     |    $610          |    $598          |       $138   |     $1120   |   $2466
   16S Man hours    |   4           |       3             |         4      |      4       |     15                                   
 
 --------------------
