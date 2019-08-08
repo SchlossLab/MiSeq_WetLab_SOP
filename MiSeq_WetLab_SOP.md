@@ -2,11 +2,11 @@
 
 
 **Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing  
-**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, & Charles Koumpouras  
+**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, Charles Koumpouras, Lucas Bishop 
 **Original Date:**  | 25-March-2013  
-**Version:**        | 5.0  
-**Last Updated:**   | 2-December-2016  
-**Updated By:**     | Charles Koumpouras  
+**Version:**        | 6.0  
+**Last Updated:**   | 8-August-2019  
+**Updated By:**     | Lucas Bishop  
 
 
 ------------------------------------
@@ -47,7 +47,7 @@
     For a more detailed desctiption of the methods, see Section 5 below.
 
 1.  Extracted DNA should be arrayed in 96 well plate format, preferably with
-    two wells on each plate open for controls. 
+    two wells on each plate open for controls. We use the Qiagen DNeasy PowerSoil HTP 96 Kit (Cat# 12955-4) for all extractions.
 
 2.  Samples are PCR amplified with Schloss lab indices. Each plate should contain a negative control
     (water) and a positive control (mock community)
@@ -131,20 +131,21 @@
 
   Reagent/Kit                                       |      Catalog \#  |  Price
   -------------------------------------------------------|-------------|-----------
-  MiSeq® Reagent Kit v2 (500 cycle)                    |   MS-102-2003  | $910.80
-  PhiX Control Kit v3                                   |  FC-110-3001  | $132.00
+  MiSeq® Reagent Kit v2 (500 cycle)                    |   MS-102-2003  | $1016.40
+  PhiX Control Kit v3                                   |  FC-110-3001  | $134.40
   16s Index Primers (40 total)                        |    IDT          |$1180.00
-  16s Sequencing Primers (Read 1, Index, Read 2)      |    IDT           | $41.71
-  AccuPrime™ Pfx SuperMix (200rxns)                   |    12344-040     | $331.28
-  Library Quantification Kit - Illumina/Universal      |   KK4824        | $575.00
-  SequalPrep™ Normalization Plate (96) Kit             |   A10510-01     | $453.60
+  16s Sequencing Primers (Read 1, Index, Read 2)      |    IDT           | $33.25
+  AccuPrime™ Pfx SuperMix 	                   |    12344-040     | $462.60
+  AccuPrime™ Pfx DNA polymerase	(200 rxns)			|    12344-024     | $402.00
+  KAPA Lib. Quantification Kit - Illumina/Universal      |   KK4824        | $751.98
+  SequalPrep™ Normalization Plate (96) Kit             |   A10510-01     | $1494.00
   (optional) Agilent High Sensitivity DNA Kit           |  5067-4626     | $434.70
-  (optional) QIAquick Gel Extraction Kit (50 rxns)       | 28704         | $111.00
-  epT.I.P.S. Motion 1-50 uL Reloads 24 racks of 96 tips |  30014421      | $190.00
+  epT.I.P.S. Motion 50 uL Filter Reloads 24 racks |  30014430      | $391.00
+  epT.I.P.S. Motion 1000 uL Filter Reloads 24 racks |  30014510      | $391.00
   Tip One Refill Wafers 200uL elongated graduated       |  NC9549602     | $39.24
   Tip One Refill Wafers 1000uL graduated               |   1111-2721     | $25.25
-  Fisher 1N NaOH 1L                                    |   SS266-1       | $46.32
-  TWIN.TEC 96 Well Plate Skirted Blue                  |   E951020460    | $99.23
+  Fisher 1N NaOH 1L                                    |   SS266-1       | $27.61
+  TWIN.TEC 96 Well Plate Skirted Clear                  |   E951020401    | $102.09
   MiSeq Disposable Wash Tubes                          |   15054695      | ~$5.00
 
 --------------------
@@ -153,7 +154,7 @@
 
   For 384 sample run | PCR and Indexing | Cleanup & Normalization | Library QC | Sequencing | Totals
   ----------------- | --------------- | ----------------------| --------- | ---------- | ------
-  16S Reagents     |    $588          |    $265          |       $138   |     $946   |   $1937
+  16S Reagents     |    $610          |    $598          |       $138   |     $1120   |   $2466
   16S Man hours    |   4           |       3             |         4      |      4       |     15                                   
 
 --------------------
@@ -188,7 +189,7 @@
 2.  Prepare 100ul 10 uM aliquots of indexed primers. Do not dilute
     sequencing primers.
 
-3.  Array aliquots of indexed primers into four 96 well plates using the following scheme:
+3.  Array equal aliquots of indexed primers into four 96 well plates using the following scheme:
 
     a.  A701 – A712 with A501 – A508
     b.  A701 – A712 with B501 – B508
@@ -200,8 +201,10 @@ Note: These primer plates can be stored at -20°C and used for subsequent runs.
 4.  Extract template DNA and array in 96 well format leaving two wells
     open. (One for a negative water control and another for the positive
     Mock Community control)
+    
+	4b. (OPTIONAL) Quantify the extracted DNA to confirm acceptable amounts are present for the PCR.
 
-5.  Using Illumina Experiment Manager, create a sample plate for each 96
+5.  Using Illumina Experiment Manager software (only compatible with windows), create a sample plate for each 96
     well plate of template. Choose indexes that correspond to one of the
     four index pair plates above. See Appendix A for instruction on
     creating a custom assay in IEM.
@@ -248,26 +251,50 @@ Use the following program:
 > 72°C 10:00  
 > 4°C Hold  
 
+
 ***5.4) Gel Electrophoresis***
 
 1.  1 or 2 random rows of 12 should be selected from each PCR plate and run on
-    a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)
+    a gel to confirm success of the PCR. (Alternatively all samples can be run on a single invitrogen E-Gel)
 
-2.  Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.
+2.  Use 4 ul of sample, 4 ul of loading dye in a 1% agarose gel.
 
-3.  Run at 100v for 30 minutes alongside a 1kb+ ladder.
+3.  Run at 100v for 60 minutes alongside a 1kb+ ladder or E-Gel low range ladder.
 
 4.  Photograph gel under UV. Check to be sure there is a band for every
     well.
+    
 
-***5.6) Cleanup, Normalization, and Pooling***
+***5.4b) Troubleshooting***
+-  Sometimes not every well from the PCR plate will result in a band.
 
-Use the SequalPrep Normalization Plate Kit
+1.  Locate wells in the PCR plate that did not result in a band on the gel and mark which extracted DNA samples they correspond to.
 
-1.  Transfer 18 ul of PCR product from PCR plate to corresponding well
+2.  Using a pipette, aspirate and discard the PCR product from the wells that did not produce bands.
+
+3.  Set up a new 20 ul PCR reaction, this time using :
+	- 7 ul of template DNA
+	- 2 ul of the SAME paired primers that were used originally for that sample
+	- 11 ul of mastermix made with the non-supermix polymerase (Cat.# 12344-24). Reference the product sheet when making the 	mastermix to account for change in the amount of input DNA.
+
+4.  Place in thermocycler and use the same cycling conditions as stated in section 5.3. 
+
+5.  Re-run on a gel alongside a 1kb+ ladder or E-Gel low range ladder. 
+	- For E-gels: Every well needs liquid in it (use water blanks in empty wells) for gel to work.
+
+6.  Photograph gel under UV to check that there are bands for every PCR reaction.
+
+7. Using a pipette, transfer the re-done PCR product to the original PCR plates.
+
+
+***5.5) Cleanup, Normalization, and Pooling***
+
+Use the SequalPrep Normalization Plate Kit. These steps can be automated on an epMotion system.
+
+1.  Transfer 15 ul of PCR product from PCR plate to corresponding well
     on the normalization plate.
 
-2.  Add 18 ul of Binding Buffer. Mix by pipetting, sealing, vortexing,
+2.  Add 15 ul of Binding Buffer. Mix by pipetting, sealing, vortexing,
     and spinning briefly.
 
 3.  Incubate at room temperature for 60 minutes. Plate can be incubated 
@@ -290,7 +317,7 @@ Use the SequalPrep Normalization Plate Kit
 
 9.  Freeze the remaining sample for later use.
 
-***5.7) Library QC & Quantification***
+***5.6) Library QC & Quantification***
 
 1.  Prepare the following dilutions of each pooled library in PCR grade
     H~2~O (or 10nM Tris-HCl + 0.05% Tween20):
@@ -304,6 +331,8 @@ Use the SequalPrep Normalization Plate Kit
     d.  1:2000
 
     e.  1:4000
+    
+    f.  1:8000
 
 2.  (Optional) Agilent Bioanalyzer Trace
 
@@ -445,10 +474,10 @@ Use the SequalPrep Normalization Plate Kit
     well.  Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. 
     Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \>1nM library is ideal)
 
-***5.8) Sequencing***
+***5.7) Sequencing***
 
 1.  Remove a 500 cycle reagent cartridge from the -20°C freezer.
-    Place in room temperature water bath for one hour. Place HT1 buffer
+    Place in room temperature water bath for one hour. Place Hyb buffer
     tube in 4°C fridge. While reagent cartridge is thawing, perform steps 2-6.
 
 2.  Prepare fresh 0.2N NaOH. 
@@ -460,24 +489,24 @@ Use the SequalPrep Normalization Plate Kit
     denature the DNA to 0.1N may be necessary if library concentration is 1nM or below.[^1]
 
 4.  Allow the tubes to incubate at room temperature for 5 minutes.
-    Immediately add 980 ul of ice-cold HT1 to the library tube, 
-    and 990 ul HT1 to the PhiX tube. Note: the resulting 20pM PhiX can be
+    Immediately add 980 ul of ice-cold Hyb to the library tube, 
+    and 990 ul Hyb to the PhiX tube. Note: the resulting 20pM PhiX can be
     frozen and used for subequent runs.
 
-5.  Use HT1 to further dilute both the library and PhiX to 4pM for a v2 kit. Can
+5.  Use Hyb to further dilute both the library and PhiX to 4pM for a v2 kit. Can
     load up to 8pM for a v3 kit. 
     
     See example below:
-    a.  (1.45 nM library x 10 ul) + (0.2N NaOH x 10 ul) + 980 ul HT1 =
+    a.  (1.45 nM library x 10 ul) + (0.2N NaOH x 10 ul) + 980 ul Hyb =
         14.5pM Lib, 0.002N NaOH
 
-    b.  (14.5pM lib x 275.86 ul) + 724.14 ul HT1 = 4.0pM lib, 0.00055N
+    b.  (14.5pM lib x 275.86 ul) + 724.14 ul Hyb = 4.0pM lib, 0.00055N
         NaOH
 
     c.  [(10nM PhiX x 2 ul) + 3 ul H~2~O] + (0.2N NaOH x 5 ul) + 990 ul
-        HT1 = 20pM PhiX, 0.001N NaOH
+        Hyb = 20pM PhiX, 0.001N NaOH
 
-    d.  (20pM PhiX x 200 ul) + 800 ul HT1 = 4.0pM PhiX, 0.0002N NaOH
+    d.  (20pM PhiX x 200 ul) + 800 ul Hyb = 4.0pM PhiX, 0.0002N NaOH
 
     e.  (4.0pM Lib x 900 ul) + (4.0pM PhiX x 100 ul) = solution loaded
 
@@ -492,7 +521,7 @@ Use the SequalPrep Normalization Plate Kit
     also serves to mix the reagents. Place in hood. 
 
 8.  Using a clean 1000 ul pipette tip, break the foil covering wells 12, 13, 14, and 17
-    of the reagent cartridge.
+    of the reagent cartridge. Use a new tip each time.
 
 9.  Load 600 ul of the final Libary/PhiX solution into well 17 on the reagent cartridge. 
 
@@ -500,7 +529,7 @@ Use the SequalPrep Normalization Plate Kit
     PCR tube. Repeat in separate tubes for the Index Primer(s) and Read
     2 Sequencing Primer(s).
 
-11.  Use an extra long 100 ul tip and pipetter transfer the 3 ul of Read 1 Sequencing Primer 
+11.  Use an extra long 20 ul tip and pipetter to transfer the 3 ul of Read 1 Sequencing Primer 
     to the bottom of well 12 and pipette to mix. Repeat this process spiking the Index
     Primer into well 13 and the Read 2 Sequencing Primer into well 14.
 
@@ -528,9 +557,10 @@ Use the SequalPrep Normalization Plate Kit
     parameters are correct.
 
 20. Wait for the MiSeq to perform its pre-run checks, and press start.
+	NOTE: If the pre-run check fails, try wiping down the flow cell again.
 
 
-***5.9) Run Monitoring***
+***5.8) Run Monitoring***
 
 1.  The run should be monitored periodically using Illumina Sequence
     Analysis Viewer.
@@ -552,15 +582,14 @@ Use the SequalPrep Normalization Plate Kit
     g.  Final \>Q30 score of \>70%
 
 
-***5.10) Final Steps***
+***5.9) Final Steps***
 
-1.  Perform a post run wash on the MiSeq. We recommened the bleach wash.
+1.  Perform a post run wash on the MiSeq. 
 
 2.  Dispose of liquid waste in appropriate hazardous jug and reagent
     cartridge in hazardous bucket.
 
-3.  When MiSeq Reporter finishes, copy the fastq files from the output
-    folder to the run folder on the NAS drive.
+3.  When MiSeq Reporter finishes, go to the 'MiSeq Output' folder to transfer files as need be. 
 
 4.  Perform maintenance or standby wash if required.
 
