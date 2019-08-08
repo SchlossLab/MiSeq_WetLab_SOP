@@ -2,7 +2,7 @@
 
 
 **Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing  
-**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, Charles Koumpouras, and Lucas Bishop 
+**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, Charles Koumpouras, Lucas Bishop 
 **Original Date:**  | 25-March-2013  
 **Version:**        | 6.0  
 **Last Updated:**   | 8-August-2019  
@@ -136,6 +136,7 @@
   16s Index Primers (40 total)                        |    IDT          |$1180.00
   16s Sequencing Primers (Read 1, Index, Read 2)      |    IDT           | $33.25
   AccuPrime™ Pfx SuperMix 	                   |    12344-040     | $462.60
+  AccuPrime™ Pfx DNA polymerase	(200 rxns)			|    12344-024     | $402.00
   KAPA Lib. Quantification Kit - Illumina/Universal      |   KK4824        | $751.98
   SequalPrep™ Normalization Plate (96) Kit             |   A10510-01     | $1494.00
   (optional) Agilent High Sensitivity DNA Kit           |  5067-4626     | $434.70
@@ -201,7 +202,7 @@ Note: These primer plates can be stored at -20°C and used for subsequent runs.
     open. (One for a negative water control and another for the positive
     Mock Community control)
     
-	4b.(OPTIONAL) Quantify the extracted DNA to confirm acceptable amounts are present for the PCR.
+	4b. (OPTIONAL) Quantify the extracted DNA to confirm acceptable amounts are present for the PCR.
 
 5.  Using Illumina Experiment Manager software (only compatible with windows), create a sample plate for each 96
     well plate of template. Choose indexes that correspond to one of the
@@ -250,19 +251,43 @@ Use the following program:
 > 72°C 10:00  
 > 4°C Hold  
 
+
 ***5.4) Gel Electrophoresis***
 
 1.  1 or 2 random rows of 12 should be selected from each PCR plate and run on
-    a gel to confirm success of the PCR. (Alternatively all samples can be run on a single E-Gel)
+    a gel to confirm success of the PCR. (Alternatively all samples can be run on a single invitrogen E-Gel)
 
-2.  Use 2 ul of sample, 4 ul of loading dye in a 1% agarose gel.
+2.  Use 4 ul of sample, 4 ul of loading dye in a 1% agarose gel.
 
-3.  Run at 100v for 30 minutes alongside a 1kb+ ladder.
+3.  Run at 100v for 60 minutes alongside a 1kb+ ladder or E-Gel low range ladder.
 
 4.  Photograph gel under UV. Check to be sure there is a band for every
     well.
+    
 
-***5.6) Cleanup, Normalization, and Pooling***
+***5.4b) Troubleshooting***
+-  Sometimes not every well from the PCR plate will result in a band.
+
+1.  Locate wells in the PCR plate that did not result in a band on the gel and mark which extracted DNA samples they correspond to.
+
+2.  Using a pipette, aspirate and discard the PCR product from the wells that did not produce bands.
+
+3.  Set up a new 20 ul PCR reaction, this time using :
+	- 7 ul of template DNA
+	- 2 ul of the SAME paired primers that were used originally for that sample
+	- 11 ul of mastermix made with the non-supermix polymerase (Cat.# 12344-24). Reference the product sheet when making the 	mastermix to account for change in the amount of input DNA.
+
+4.  Place in thermocycler and use the same cycling conditions as stated in section 5.3. 
+
+5.  Re-run on a gel alongside a 1kb+ ladder or E-Gel low range ladder. 
+	- For E-gels: Every well needs liquid in it (use water blanks in empty wells) for gel to work.
+
+6.  Photograph gel under UV to check that there are bands for every PCR reaction.
+
+7. Using a pipette, transfer the re-done PCR product to the original PCR plates.
+
+
+***5.5) Cleanup, Normalization, and Pooling***
 
 Use the SequalPrep Normalization Plate Kit
 
@@ -292,7 +317,7 @@ Use the SequalPrep Normalization Plate Kit
 
 9.  Freeze the remaining sample for later use.
 
-***5.7) Library QC & Quantification***
+***5.6) Library QC & Quantification***
 
 1.  Prepare the following dilutions of each pooled library in PCR grade
     H~2~O (or 10nM Tris-HCl + 0.05% Tween20):
@@ -447,7 +472,7 @@ Use the SequalPrep Normalization Plate Kit
     well.  Be sure to pool such that each plate has an equal final conentration (not necessarily equal volumes. 
     Hint: C~1~ V~1~ =  C~2~ V~2~ ). Final pool must be \>10ul in total volume (40-80ul of \>1nM library is ideal)
 
-***5.8) Sequencing***
+***5.7) Sequencing***
 
 1.  Remove a 500 cycle reagent cartridge from the -20°C freezer.
     Place in room temperature water bath for one hour. Place HT1 buffer
@@ -532,7 +557,7 @@ Use the SequalPrep Normalization Plate Kit
 20. Wait for the MiSeq to perform its pre-run checks, and press start.
 
 
-***5.9) Run Monitoring***
+***5.8) Run Monitoring***
 
 1.  The run should be monitored periodically using Illumina Sequence
     Analysis Viewer.
@@ -554,7 +579,7 @@ Use the SequalPrep Normalization Plate Kit
     g.  Final \>Q30 score of \>70%
 
 
-***5.10) Final Steps***
+***5.9) Final Steps***
 
 1.  Perform a post run wash on the MiSeq. We recommened the bleach wash.
 
