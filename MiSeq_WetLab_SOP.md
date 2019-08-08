@@ -289,12 +289,12 @@ Use the following program:
 
 ***5.5) Cleanup, Normalization, and Pooling***
 
-Use the SequalPrep Normalization Plate Kit
+Use the SequalPrep Normalization Plate Kit. These steps can be automated on an epMotion system.
 
-1.  Transfer 18 ul of PCR product from PCR plate to corresponding well
+1.  Transfer 15 ul of PCR product from PCR plate to corresponding well
     on the normalization plate.
 
-2.  Add 18 ul of Binding Buffer. Mix by pipetting, sealing, vortexing,
+2.  Add 15 ul of Binding Buffer. Mix by pipetting, sealing, vortexing,
     and spinning briefly.
 
 3.  Incubate at room temperature for 60 minutes. Plate can be incubated 
@@ -331,6 +331,8 @@ Use the SequalPrep Normalization Plate Kit
     d.  1:2000
 
     e.  1:4000
+    
+    f.  1:8000
 
 2.  (Optional) Agilent Bioanalyzer Trace
 
@@ -475,7 +477,7 @@ Use the SequalPrep Normalization Plate Kit
 ***5.7) Sequencing***
 
 1.  Remove a 500 cycle reagent cartridge from the -20°C freezer.
-    Place in room temperature water bath for one hour. Place HT1 buffer
+    Place in room temperature water bath for one hour. Place Hyb buffer
     tube in 4°C fridge. While reagent cartridge is thawing, perform steps 2-6.
 
 2.  Prepare fresh 0.2N NaOH. 
@@ -487,24 +489,24 @@ Use the SequalPrep Normalization Plate Kit
     denature the DNA to 0.1N may be necessary if library concentration is 1nM or below.[^1]
 
 4.  Allow the tubes to incubate at room temperature for 5 minutes.
-    Immediately add 980 ul of ice-cold HT1 to the library tube, 
-    and 990 ul HT1 to the PhiX tube. Note: the resulting 20pM PhiX can be
+    Immediately add 980 ul of ice-cold Hyb to the library tube, 
+    and 990 ul Hyb to the PhiX tube. Note: the resulting 20pM PhiX can be
     frozen and used for subequent runs.
 
-5.  Use HT1 to further dilute both the library and PhiX to 4pM for a v2 kit. Can
+5.  Use Hyb to further dilute both the library and PhiX to 4pM for a v2 kit. Can
     load up to 8pM for a v3 kit. 
     
     See example below:
-    a.  (1.45 nM library x 10 ul) + (0.2N NaOH x 10 ul) + 980 ul HT1 =
+    a.  (1.45 nM library x 10 ul) + (0.2N NaOH x 10 ul) + 980 ul Hyb =
         14.5pM Lib, 0.002N NaOH
 
-    b.  (14.5pM lib x 275.86 ul) + 724.14 ul HT1 = 4.0pM lib, 0.00055N
+    b.  (14.5pM lib x 275.86 ul) + 724.14 ul Hyb = 4.0pM lib, 0.00055N
         NaOH
 
     c.  [(10nM PhiX x 2 ul) + 3 ul H~2~O] + (0.2N NaOH x 5 ul) + 990 ul
-        HT1 = 20pM PhiX, 0.001N NaOH
+        Hyb = 20pM PhiX, 0.001N NaOH
 
-    d.  (20pM PhiX x 200 ul) + 800 ul HT1 = 4.0pM PhiX, 0.0002N NaOH
+    d.  (20pM PhiX x 200 ul) + 800 ul Hyb = 4.0pM PhiX, 0.0002N NaOH
 
     e.  (4.0pM Lib x 900 ul) + (4.0pM PhiX x 100 ul) = solution loaded
 
@@ -519,7 +521,7 @@ Use the SequalPrep Normalization Plate Kit
     also serves to mix the reagents. Place in hood. 
 
 8.  Using a clean 1000 ul pipette tip, break the foil covering wells 12, 13, 14, and 17
-    of the reagent cartridge.
+    of the reagent cartridge. Use a new tip each time.
 
 9.  Load 600 ul of the final Libary/PhiX solution into well 17 on the reagent cartridge. 
 
@@ -527,7 +529,7 @@ Use the SequalPrep Normalization Plate Kit
     PCR tube. Repeat in separate tubes for the Index Primer(s) and Read
     2 Sequencing Primer(s).
 
-11.  Use an extra long 100 ul tip and pipetter transfer the 3 ul of Read 1 Sequencing Primer 
+11.  Use an extra long 20 ul tip and pipetter to transfer the 3 ul of Read 1 Sequencing Primer 
     to the bottom of well 12 and pipette to mix. Repeat this process spiking the Index
     Primer into well 13 and the Read 2 Sequencing Primer into well 14.
 
@@ -555,6 +557,7 @@ Use the SequalPrep Normalization Plate Kit
     parameters are correct.
 
 20. Wait for the MiSeq to perform its pre-run checks, and press start.
+	NOTE: If the pre-run check fails, try wiping down the flow cell again.
 
 
 ***5.8) Run Monitoring***
@@ -581,13 +584,12 @@ Use the SequalPrep Normalization Plate Kit
 
 ***5.9) Final Steps***
 
-1.  Perform a post run wash on the MiSeq. We recommened the bleach wash.
+1.  Perform a post run wash on the MiSeq. 
 
 2.  Dispose of liquid waste in appropriate hazardous jug and reagent
     cartridge in hazardous bucket.
 
-3.  When MiSeq Reporter finishes, copy the fastq files from the output
-    folder to the run folder on the NAS drive.
+3.  When MiSeq Reporter finishes, go to the 'MiSeq Output' folder to transfer files as need be. 
 
 4.  Perform maintenance or standby wash if required.
 
