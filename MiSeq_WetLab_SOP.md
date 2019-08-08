@@ -2,11 +2,11 @@
 
 
 **Detailed Title:** | 16S rRNA Sequencing with the Illumina MiSeq: Library Generation, QC, & Sequencing  
-**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, & Charles Koumpouras  
+**Authors:**        | James Kozich, Patrick Schloss, Niel Baxter, Matt Jenior, Charles Koumpouras, and Lucas Bishop 
 **Original Date:**  | 25-March-2013  
-**Version:**        | 5.0  
-**Last Updated:**   | 2-December-2016  
-**Updated By:**     | Charles Koumpouras  
+**Version:**        | 6.0  
+**Last Updated:**   | 8-August-2019  
+**Updated By:**     | Lucas Bishop  
 
 
 ------------------------------------
@@ -188,7 +188,7 @@
 2.  Prepare 100ul 10 uM aliquots of indexed primers. Do not dilute
     sequencing primers.
 
-3.  Array aliquots of indexed primers into four 96 well plates using the following scheme:
+3.  Array equal aliquots of indexed primers into four 96 well plates using the following scheme:
 
     a.  A701 – A712 with A501 – A508
     b.  A701 – A712 with B501 – B508
@@ -200,8 +200,10 @@ Note: These primer plates can be stored at -20°C and used for subsequent runs.
 4.  Extract template DNA and array in 96 well format leaving two wells
     open. (One for a negative water control and another for the positive
     Mock Community control)
+    
+	4b.(OPTIONAL) Quantify the extracted DNA to confirm acceptable amounts are present for the PCR.
 
-5.  Using Illumina Experiment Manager, create a sample plate for each 96
+5.  Using Illumina Experiment Manager software (only compatible with windows), create a sample plate for each 96
     well plate of template. Choose indexes that correspond to one of the
     four index pair plates above. See Appendix A for instruction on
     creating a custom assay in IEM.
